@@ -1,24 +1,78 @@
 <!DOCTYPE html>
-<!-- =====================================================================
-   Mirkomil Oblokulov — Portfolio (Green Theme)
-   Edit tips:
-     - Colors live in css/styles.css (:root --green, --green-dark).
-     - Tabs (About/Projects/…) are the <nav> links; they scroll to sections.
-     - Hero photo lives at /assets/img/headshot.jpg (circular on the right).
-     - Résumé button opens /assets/Mirkomil_Oblokulov_Revised_Resume.pdf.
-   ===================================================================== -->
+<!--
+  Mirkomil Oblokulov — Portfolio (Green, single-file)
+  Edit basics:
+    - Colors: change --green / --green-dark below.
+    - Hero name/tagline: inside .hero.
+    - Photo path: /assets/img/headshot.jpg  (rename your image exactly to this).
+    - Resume path: /assets/Mirkomil_Oblokulov_Revised_Resume.pdf
+-->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mirkomil Oblokulov — Portfolio</title>
   <meta name="description" content="Portfolio of Mirkomil Oblokulov — projects, experience, education, and skills." />
-  <link rel="stylesheet" href="css/styles.css" />
-  <!-- Simple favicon (optional) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230a6e3e'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='46' font-family='Arial' fill='white'%3EMO%3C/text%3E%3C/svg%3E">
+
+  <style>
+    :root{
+      --green:#0a6e3e;        /* main accent */
+      --green-dark:#074e2b;   /* navbar/footer */
+      --bg:#ffffff; --text:#0a0a0a; --muted:#626a72; --line:#e8e8e8;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font:400 16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg)}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+    /* Nav */
+    .site-header{position:sticky;top:0;z-index:50;background:var(--green-dark);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+    .site-header .container{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{font-weight:900;letter-spacing:.5px;color:#fff;text-decoration:none}
+    .nav a{color:#fff;text-decoration:none;margin:0 12px;opacity:.9}
+    .nav a:hover{opacity:1}
+    .nav a.active{border-bottom:2px solid #fff;padding-bottom:2px}
+
+    /* Hero */
+    .hero{background:var(--green);color:#fff;padding:72px 0 88px;position:relative;overflow:hidden}
+    .hero-inner{display:grid;grid-template-columns:1fr 360px;gap:40px;align-items:center}
+    .hero h1{font-size:clamp(38px,6vw,72px);line-height:1;margin:0 0 12px;font-weight:900;letter-spacing:1px;text-transform:uppercase}
+    .hero h1 .last{opacity:.95;text-shadow:0 2px 0 rgba(0,0,0,.15)}
+    .tagline{font-size:clamp(16px,2.5vw,20px);opacity:.95;margin:8px 0 18px}
+    .hero-actions{display:flex;gap:16px;margin-top:8px}
+    .icon-btn{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:10px;background:#fff;color:var(--green);text-decoration:none;font-weight:700;box-shadow:0 4px 20px rgba(0,0,0,.18)}
+    .icon-btn:hover{transform:translateY(-1px)}
+    .scroll-cue{display:inline-block;margin-top:28px;color:#fff;text-decoration:none;font-size:18px;opacity:.8}
+    .scroll-cue:hover{opacity:1}
+    .hero-photo{display:grid;place-items:center}
+    .hero-photo img{width:320px;height:320px;object-fit:cover;border-radius:50%;border:6px solid rgba(255,255,255,.85);box-shadow:0 12px 40px rgba(0,0,0,.35)}
+
+    /* Sections */
+    .section{padding:64px 0;border-top:1px solid var(--line);background:var(--bg)}
+    h2{font-size:clamp(22px,3vw,28px);margin:0 0 12px}
+    p{margin:8px 0}
+    .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 16px;padding-left:18px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:12px}
+    .card{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+    .card .meta{font-size:13px;color:var(--muted)}
+    .timeline{list-style:none;padding-left:0;margin:0}
+    .timeline>li{border-left:3px solid var(--green);padding-left:14px;margin-left:6px;margin-bottom:16px}
+    .timeline .when{color:var(--muted);font-weight:600;font-size:14px}
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .btn{display:inline-block;background:var(--green);color:#fff;border-radius:12px;padding:10px 16px;text-decoration:none;font-weight:600}
+    .btn:hover{filter:brightness(1.05)}
+    .site-footer{background:var(--green-dark);color:#fff;padding:18px 0;text-align:center}
+
+    @media (max-width:900px){
+      .hero-inner{grid-template-columns:1fr}
+      .hero-photo{order:-1;margin-bottom:10px}
+      .hero-photo img{width:220px;height:220px}
+    }
+  </style>
 </head>
 <body>
-  <!-- =========================== NAVBAR (sticky) =========================== -->
+  <!-- NAV -->
   <header class="site-header" id="top">
     <div class="container">
       <a href="#top" class="brand">MO</a>
@@ -33,22 +87,19 @@
     </div>
   </header>
 
-  <!-- =========================== HERO =========================== -->
+  <!-- HERO -->
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-text">
         <h1>Mirkomil <span class="last">Oblokulov</span></h1>
         <p class="tagline">Seeking internship opportunities • Actuarial Science @ Western University</p>
         <div class="hero-actions">
-          <!-- LinkedIn -->
           <a class="icon-btn" href="https://www.linkedin.com/in/mirkoomil" target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v16h-4zM8 8h3.8v2.2h.1c.5-1 1.7-2.3 3.6-2.3 3.8 0 4.5 2.5 4.5 5.8V24h-4v-7.2c0-1.7 0-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.7V24H8z"/></svg>
           </a>
-          <!-- Résumé -->
           <a class="icon-btn" href="assets/Mirkomil_Oblokulov_Revised_Resume.pdf" target="_blank" rel="noreferrer" aria-label="Resume">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path fill="currentColor" d="M14 2v6h6"/></svg>
           </a>
-          <!-- Email -->
           <a class="icon-btn" href="mailto:mirkomiloblokulov@gmail.com" aria-label="Email">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5z"/></svg>
           </a>
@@ -56,15 +107,14 @@
         <a href="#about" class="scroll-cue" aria-label="Scroll to About">▼</a>
       </div>
 
-      <!-- Circular headshot on the right -->
+      <!-- Make sure this image exists at /assets/img/headshot.jpg -->
       <div class="hero-photo">
-        <!-- If this breaks, confirm the file path /assets/img/headshot.jpg -->
-        <img src="assets/img/headshot.jpg" alt="Portrait of Mirkomil Oblokulov" />
+        <img src="assets/img/headshot.jpg" alt="Portrait of Mirkomil Oblokulov">
       </div>
     </div>
   </section>
 
-  <!-- =========================== ABOUT =========================== -->
+  <!-- ABOUT -->
   <section id="about" class="section">
     <div class="container">
       <h2>About</h2>
@@ -78,17 +128,16 @@
     </div>
   </section>
 
-  <!-- =========================== PROJECTS =========================== -->
+  <!-- PROJECTS -->
   <section id="projects" class="section">
     <div class="container">
       <h2>Projects</h2>
       <div class="cards">
-        <!-- Duplicate <article class="card"> to add another project -->
         <article class="card">
           <h3>United F.C. Digital Campaigns</h3>
           <p>Designed and executed social and email campaigns using Canva & MailChimp; improved website engagement and maintained brand consistency.</p>
           <p class="meta">Canva • MailChimp • Social</p>
-          <p class="links"><a href="#" target="_blank" rel="noreferrer">Case Notes (add)</a></p>
+          <p><a href="#" target="_blank" rel="noreferrer">Case Notes (add)</a></p>
         </article>
         <article class="card">
           <h3>mirkomiloblokulov.com</h3>
@@ -104,7 +153,7 @@
     </div>
   </section>
 
-  <!-- =========================== EXPERIENCE =========================== -->
+  <!-- EXPERIENCE -->
   <section id="experience" class="section">
     <div class="container">
       <h2>Experience</h2>
@@ -135,7 +184,7 @@
     </div>
   </section>
 
-  <!-- =========================== EDUCATION =========================== -->
+  <!-- EDUCATION -->
   <section id="education" class="section">
     <div class="container">
       <h2>Education</h2>
@@ -157,7 +206,7 @@
     </div>
   </section>
 
-  <!-- =========================== SKILLS =========================== -->
+  <!-- SKILLS -->
   <section id="skills" class="section">
     <div class="container">
       <h2>Skills</h2>
@@ -171,7 +220,7 @@
     </div>
   </section>
 
-  <!-- =========================== RESUME =========================== -->
+  <!-- RESUME -->
   <section id="resume" class="section">
     <div class="container">
       <h2>Resume</h2>
@@ -184,12 +233,14 @@
   </footer>
 
   <script>
-    // Year
+    // Footer year
     document.getElementById('y').textContent = new Date().getFullYear();
 
     // Smooth scroll + active tab highlight
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const navLinks = Array.from(document.querySelectorAll('.nav a'));
     document.querySelectorAll('.nav a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
+      a.addEventListener('click', e => {
         const id = a.getAttribute('href');
         if (id.length > 1) {
           e.preventDefault();
@@ -197,8 +248,6 @@
         }
       });
     });
-    const sections = Array.from(document.querySelectorAll('section[id]'));
-    const navLinks = Array.from(document.querySelectorAll('.nav a'));
     const onScroll = () => {
       let current = sections[0].id;
       sections.forEach(s => { if (s.getBoundingClientRect().top <= 80) current = s.id; });
@@ -209,4 +258,3 @@
   </script>
 </body>
 </html>
-
