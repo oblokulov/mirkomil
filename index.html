@@ -1,217 +1,152 @@
 <!DOCTYPE html>
-<!--
-  ===== Mirkomil Oblokulov — Portfolio =====
-  Quick edit map:
-    - <head>: SEO (title/description), Open Graph image/URL.
-    - NAV: anchors; add/remove sections by updating <nav> and matching section ids.
-    - HERO: name, one‑line pitch, email button, headshot path.
-    - ABOUT: short bio + key facts list.
-    - PROJECTS: duplicate an <article class="card"> to add more projects.
-    - EXPERIENCE: each timeline <li> is one role (job title, org, dates, bullets).
-    - EDUCATION: duplicate .edu-item blocks for more schools/certs.
-    - SKILLS: add/remove <div> blocks in .skills-grid.
-    - RESUME: the PDF path is /assets/Mirkomil_Oblokulov_Revised_Resume.pdf — replace file to update.
-    - CONTACT: email, phone, city.
-    - THEME: dark mode toggle at the bottom JS.
--->
+<!-- =====================================================================
+   Mirkomil Oblokulov — Portfolio (Green Theme)
+   Edit tips:
+     - Colors live in css/styles.css (:root --green, --green-dark).
+     - Tabs (About/Projects/…) are the <nav> links; they scroll to sections.
+     - Hero photo lives at /assets/img/headshot.jpg (circular on the right).
+     - Résumé button opens /assets/Mirkomil_Oblokulov_Revised_Resume.pdf.
+   ===================================================================== -->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mirkomil Oblokulov — Portfolio</title>
-  <!-- Short 150–160 char summary that appears in search/snippets -->
   <meta name="description" content="Portfolio of Mirkomil Oblokulov — projects, experience, education, and skills." />
-
-  <!-- Open Graph (social previews). Update __DOMAIN__ if your domain changes. -->
-  <meta property="og:title" content="Mirkomil Oblokulov — Portfolio">
-  <meta property="og:description" content="Projects, experience, and contact info.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.mirkomiloblokulov.com">
-  <meta property="og:image" content="https://www.mirkomiloblokulov.com/assets/img/headshot.jpg">
-
-  <!-- Simple SVG favicon. Replace with your .ico/.png if you prefer. -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23000000'/%3E%3Ctext x='50' y='58' text-anchor='middle' font-size='46' font-family='Arial' fill='white'%3EMO%3C/text%3E%3C/svg%3E">
-
-  <!-- Site styles -->
-  <link rel="preload" href="css/styles.css" as="style">
-  <link rel="stylesheet" href="css/styles.css">
-
-  <meta name="theme-color" content="#0a0a0a">
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Simple favicon (optional) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230a6e3e'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='46' font-family='Arial' fill='white'%3EMO%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-  <!-- ====== NAVBAR ====== -->
+  <!-- =========================== NAVBAR (sticky) =========================== -->
   <header class="site-header" id="top">
-    <div class="container header-inner">
-      <!-- Brand text (click = scroll to top) -->
-      <a href="#top" class="brand">Mirkomil Oblokulov</a>
-      <!-- Update anchors if you rename/remove sections -->
+    <div class="container">
+      <a href="#top" class="brand">MO</a>
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#skills">Skills</a>
-        <a href="#resume">Résumé</a>
-        <a href="#contact">Contact</a>
+        <a href="#resume">Resume</a>
       </nav>
-      <div class="header-actions">
-        <!-- Résumé button: leave path the same, just replace the file in /assets/ -->
-        <a class="btn btn-outline" href="assets/Mirkomil_Oblokulov_Revised_Resume.pdf" target="_blank" rel="noreferrer">Open Résumé (PDF)</a>
-        <!-- Dark mode toggle -->
-        <button class="btn btn-icon" id="themeToggle" aria-label="Toggle dark mode">☾</button>
-      </div>
     </div>
   </header>
 
-  <main class="container">
-    <!-- ====== HERO ====== -->
-    <section class="section hero">
-      <div class="hero-wrap">
-        <!-- Headshot: replace /assets/img/headshot.jpg if you update the photo -->
-        <div class="avatar-wrap">
-          <img src="assets/img/headshot.jpg" alt="Portrait of Mirkomil Oblokulov" class="avatar" />
+  <!-- =========================== HERO =========================== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Mirkomil <span class="last">Oblokulov</span></h1>
+        <p class="tagline">Seeking internship opportunities • Actuarial Science @ Western University</p>
+        <div class="hero-actions">
+          <!-- LinkedIn -->
+          <a class="icon-btn" href="https://www.linkedin.com/in/mirkoomil" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v16h-4zM8 8h3.8v2.2h.1c.5-1 1.7-2.3 3.6-2.3 3.8 0 4.5 2.5 4.5 5.8V24h-4v-7.2c0-1.7 0-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.7V24H8z"/></svg>
+          </a>
+          <!-- Résumé -->
+          <a class="icon-btn" href="assets/Mirkomil_Oblokulov_Revised_Resume.pdf" target="_blank" rel="noreferrer" aria-label="Resume">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path fill="currentColor" d="M14 2v6h6"/></svg>
+          </a>
+          <!-- Email -->
+          <a class="icon-btn" href="mailto:mirkomiloblokulov@gmail.com" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5z"/></svg>
+          </a>
         </div>
-        <div class="hero-text">
-          <!-- Main headline: keep it short and specific -->
-          <h1 class="headline">Hi, I’m <span class="underline">Mirkomil</span>.</h1>
-          <!-- One-liner: who you are + what you’re looking for -->
-          <p class="subhead">Actuarial Science student at Western University and varsity soccer athlete with hands-on experience in marketing, communications, and web development. Seeking internship opportunities.</p>
-          <div class="actions">
-            <a class="btn btn-outline" href="#projects">See projects</a>
-            <!-- Update email here to change the contact link -->
-            <a class="btn btn-solid" href="mailto:mirkomiloblokulov@gmail.com">Email me</a>
-            <!-- Optional: add a LinkedIn button
-            <a class="btn btn-outline" href="https://www.linkedin.com/in/mirkoomil" target="_blank" rel="noreferrer">LinkedIn</a>
-            -->
-          </div>
-        </div>
+        <a href="#about" class="scroll-cue" aria-label="Scroll to About">▼</a>
       </div>
-    </section>
 
-    <hr class="divider" />
+      <!-- Circular headshot on the right -->
+      <div class="hero-photo">
+        <!-- If this breaks, confirm the file path /assets/img/headshot.jpg -->
+        <img src="assets/img/headshot.jpg" alt="Portrait of Mirkomil Oblokulov" />
+      </div>
+    </div>
+  </section>
 
-    <!-- ====== ABOUT ====== -->
-    <section id="about" class="section">
+  <!-- =========================== ABOUT =========================== -->
+  <section id="about" class="section">
+    <div class="container">
       <h2>About</h2>
-      <!-- Keep this 3–6 lines; focus on strengths + tools + goals -->
-      <p class="body">
-        Motivated Actuarial Science student at Western University with experience in marketing, communications, and web development. Adept at creating content, running digital campaigns, and working with tools like Canva and MailChimp. Collaborative team player and varsity athlete with strong leadership and organization skills.
-      </p>
-      <!-- Quick facts (edit values) -->
-      <ul class="key-facts">
+      <p>Actuarial Science student at Western University and varsity soccer athlete with hands-on experience in marketing, communications, and web development. Comfortable creating content, running digital campaigns, and building clean, responsive sites. Seeking an internship to grow skills and deliver measurable impact.</p>
+      <ul class="facts">
         <li><strong>Location:</strong> Toronto, ON</li>
         <li><strong>Email:</strong> <a href="mailto:mirkomiloblokulov@gmail.com">mirkomiloblokulov@gmail.com</a></li>
-        <li><strong>Phone:</strong> <a href="tel:+16477647799">+1&nbsp;647-764-7799</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+16477647799">+1 647-764-7799</a></li>
         <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mirkoomil" target="_blank" rel="noreferrer">/in/mirkoomil</a></li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <hr class="divider" />
-
-    <!-- ====== PROJECTS ====== -->
-    <section id="projects" class="section">
+  <!-- =========================== PROJECTS =========================== -->
+  <section id="projects" class="section">
+    <div class="container">
       <h2>Projects</h2>
-      <!-- Tags are just for quick visual grouping; edit or remove -->
-      <ul class="tags">
-        <li>Marketing</li><li>Web</li><li>Analytics</li>
-      </ul>
       <div class="cards">
-        <!--
-          To add a project:
-            1) Duplicate this <article class="card"> block.
-            2) Replace title, description, stack, and links.
-            3) You can swap the <div class="thumb"> placeholder for an <img>.
-        -->
+        <!-- Duplicate <article class="card"> to add another project -->
         <article class="card">
-          <div class="thumb" role="img" aria-label="United FC marketing visuals">United&nbsp;F.C. Campaigns</div>
           <h3>United F.C. Digital Campaigns</h3>
-          <p>Designed and executed social and email campaigns using Canva &amp; MailChimp; improved website engagement and maintained brand consistency.</p>
+          <p>Designed and executed social and email campaigns using Canva & MailChimp; improved website engagement and maintained brand consistency.</p>
           <p class="meta">Canva • MailChimp • Social</p>
-          <p class="links">
-            <!-- Replace # with your case study link (optional) -->
-            <a href="#" target="_blank" rel="noreferrer">Case Notes (add)</a>
-          </p>
+          <p class="links"><a href="#" target="_blank" rel="noreferrer">Case Notes (add)</a></p>
         </article>
-
         <article class="card">
-          <div class="thumb" role="img" aria-label="Personal website thumbnail">Personal Portfolio</div>
           <h3>mirkomiloblokulov.com</h3>
-          <p>This portfolio site—single-page static layout with accessible, responsive CSS and a dark mode toggle; deployed via GitHub Pages.</p>
-          <p class="meta">HTML • CSS • GitHub Pages</p>
-          <p class="links">
-            <!-- This page is the live site -->
-            <a href="#" target="_blank" rel="noreferrer">Live (this)</a>
-          </p>
+          <p>Single-page, static portfolio with accessible, responsive CSS and green hero section; easily deployed on GitHub Pages or Cloudflare Pages.</p>
+          <p class="meta">HTML • CSS</p>
         </article>
-
         <article class="card">
-          <div class="thumb" role="img" aria-label="UFA Tech visuals">UFA Tech Club</div>
           <h3>UFA Tech Club Website</h3>
-          <p>Founded the club to promote student tech engagement; set up a simple WordPress site and comms workflow.</p>
+          <p>Founded a student club and shipped a WordPress site + comms workflow to promote tech engagement at school.</p>
           <p class="meta">WordPress • Content</p>
-          <p class="links">
-            <!-- Replace with URL if you publish the site -->
-            <a href="#" target="_blank" rel="noreferrer">Link (add)</a>
-          </p>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <hr class="divider" />
-
-    <!-- ====== EXPERIENCE ====== -->
-    <section id="experience" class="section">
+  <!-- =========================== EXPERIENCE =========================== -->
+  <section id="experience" class="section">
+    <div class="container">
       <h2>Experience</h2>
-      <!-- Each <li> is one role: title — org (dates) + bullet list -->
       <ol class="timeline">
         <li>
-          <div class="dot" aria-hidden="true"></div>
-          <div class="content">
-            <h3>Marketing &amp; Communication Intern — United F.C. <span class="when">Feb&nbsp;2024 – Jun&nbsp;2024</span></h3>
-            <ul>
-              <li>Created marketing content and executed digital campaigns.</li>
-              <li>Managed social media and email campaigns using Canva &amp; MailChimp.</li>
-              <li>Improved website engagement and ensured brand consistency.</li>
-            </ul>
-          </div>
+          <h3>Marketing & Communication Intern — United F.C. <span class="when">Feb 2024 – Jun 2024</span></h3>
+          <ul>
+            <li>Created marketing content and executed digital campaigns.</li>
+            <li>Managed social media and email campaigns using Canva & MailChimp.</li>
+            <li>Improved website engagement and ensured brand consistency.</li>
+          </ul>
         </li>
         <li>
-          <div class="dot" aria-hidden="true"></div>
-          <div class="content">
-            <h3>Customer Service Support — Shoppers Drug Mart <span class="when">Sep&nbsp;2021 – May&nbsp;2023</span></h3>
-            <ul>
-              <li>Delivered customer support and assisted store operations.</li>
-              <li>Resolved issues and maintained inventory accuracy.</li>
-            </ul>
-          </div>
+          <h3>Customer Service Support — Shoppers Drug Mart <span class="when">Sep 2021 – May 2023</span></h3>
+          <ul>
+            <li>Delivered customer support and assisted store operations.</li>
+            <li>Resolved issues and maintained inventory accuracy.</li>
+          </ul>
         </li>
         <li>
-          <div class="dot" aria-hidden="true"></div>
-          <div class="content">
-            <h3>Hotel Receptionist — Bibikhanum Hotel <span class="when">Mar&nbsp;2021 – Sep&nbsp;2021</span></h3>
-            <ul>
-              <li>Handled front-desk operations, reservations, and guest relations.</li>
-              <li>Supported international guests with travel and tourism needs.</li>
-            </ul>
-          </div>
+          <h3>Hotel Receptionist — Bibikhanum Hotel <span class="when">Mar 2021 – Sep 2021</span></h3>
+          <ul>
+            <li>Handled front-desk operations, reservations, and guest relations.</li>
+            <li>Supported international guests with travel and tourism needs.</li>
+          </ul>
         </li>
       </ol>
-    </section>
+    </div>
+  </section>
 
-    <hr class="divider" />
-
-    <!-- ====== EDUCATION ====== -->
-    <section id="education" class="section">
+  <!-- =========================== EDUCATION =========================== -->
+  <section id="education" class="section">
+    <div class="container">
       <h2>Education</h2>
-      <!-- Duplicate .edu-item to add schools/certifications -->
-      <div class="edu-item">
+      <div class="edu">
         <h3>Western University — B.Sc. Actuarial Science <span class="when">2023–2027</span></h3>
         <ul>
           <li>Varsity Athlete: Western Men’s Soccer Team</li>
           <li>Relevant Coursework: Mathematics, Statistics, Finance</li>
         </ul>
       </div>
-      <div class="edu-item">
+      <div class="edu">
         <h3>Ursula Franklin Academy — OSSD <span class="when">2019–2023</span></h3>
         <ul>
           <li>Founded UFA Tech Club to promote tech engagement</li>
@@ -219,77 +154,59 @@
           <li>Bilingual in French</li>
         </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <hr class="divider" />
-
-    <!-- ====== SKILLS ====== -->
-    <section id="skills" class="section">
+  <!-- =========================== SKILLS =========================== -->
+  <section id="skills" class="section">
+    <div class="container">
       <h2>Skills</h2>
-      <!-- Add/remove <div> blocks to change categories -->
       <div class="skills-grid">
-        <div>
-          <h3>Digital Marketing</h3>
-          <p>Canva, MailChimp, Social Media, SEO basics</p>
-        </div>
-        <div>
-          <h3>Web Development</h3>
-          <p>HTML, CSS, JavaScript (basic), WordPress</p>
-        </div>
-        <div>
-          <h3>Tools</h3>
-          <p>Microsoft Office, Google Workspace</p>
-        </div>
-        <div>
-          <h3>Languages</h3>
-          <p>English, French (basic)</p>
-        </div>
-        <div>
-          <h3>Certifications</h3>
-          <p>First Aid CPR-C (Lifesaving Society), CFA Level 1 (in progress)</p>
-        </div>
+        <div><h4>Digital Marketing</h4><p>Canva, MailChimp, Social Media, SEO basics</p></div>
+        <div><h4>Web Development</h4><p>HTML, CSS, JavaScript (basic), WordPress</p></div>
+        <div><h4>Tools</h4><p>Microsoft Office, Google Workspace</p></div>
+        <div><h4>Languages</h4><p>English, French (basic)</p></div>
+        <div><h4>Certifications</h4><p>First Aid CPR-C (Lifesaving Society), CFA Level 1 (in progress)</p></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <hr class="divider" />
+  <!-- =========================== RESUME =========================== -->
+  <section id="resume" class="section">
+    <div class="container">
+      <h2>Resume</h2>
+      <p><a class="btn" href="assets/Mirkomil_Oblokulov_Revised_Resume.pdf" target="_blank" rel="noreferrer">Open Résumé (PDF)</a></p>
+    </div>
+  </section>
 
-    <!-- ====== RESUME ====== -->
-    <section id="resume" class="section">
-      <h2>Résumé</h2>
-      <!-- Replace the file in /assets/ to update your resume without changing links -->
-      <p><a class="btn btn-outline" href="assets/Mirkomil_Oblokulov_Revised_Resume.pdf" target="_blank" rel="noreferrer">Open Résumé (PDF)</a></p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ====== CONTACT ====== -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <!-- Update email/phone here (also check the About facts above) -->
-      <p>Email: <a href="mailto:mirkomiloblokulov@gmail.com">mirkomiloblokulov@gmail.com</a> · Phone: <a href="tel:+16477647799">+1&nbsp;647-764-7799</a> · Toronto, ON</p>
-    </section>
-  </main>
-
-  <footer class="container site-footer">
-    © <span id="y">2025</span> Mirkomil Oblokulov • Built with HTML &amp; CSS • Hosted on GitHub Pages
+  <footer class="site-footer">
+    <div class="container">© <span id="y"></span> Mirkomil Oblokulov</div>
   </footer>
 
   <script>
-    // ====== THEME TOGGLE (no dependencies) ======
-    // Saves preference in localStorage so it persists between visits.
-    const root = document.documentElement;
-    const btn = document.getElementById('themeToggle');
-    const pref = localStorage.getItem('theme');
-    if (pref === 'dark' || (!pref && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      root.classList.add('dark');
-    }
-    btn.addEventListener('click', () => {
-      root.classList.toggle('dark');
-      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
-    });
-
-    // Set footer year automatically
+    // Year
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Smooth scroll + active tab highlight
+    document.querySelectorAll('.nav a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const navLinks = Array.from(document.querySelectorAll('.nav a'));
+    const onScroll = () => {
+      let current = sections[0].id;
+      sections.forEach(s => { if (s.getBoundingClientRect().top <= 80) current = s.id; });
+      navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   </script>
 </body>
 </html>
+
