@@ -72,20 +72,50 @@
   </style>
 </head>
 <body>
+  <script>
+  // Hamburger toggle
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('primaryNav');
+
+  function closeMenu() {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('no-scroll');
+  }
+
+  toggle.addEventListener('click', () => {
+    const opened = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', opened ? 'true' : 'false');
+    document.body.classList.toggle('no-scroll', opened);
+  });
+
+  // Close when a link is clicked (and on Esc)
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  window.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+</script>
+
   <!-- NAV -->
   <header class="site-header" id="top">
-    <div class="container">
-      <a href="#top" class="brand">MIRKOMIL</a>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#resume">Resume</a>
-      </nav>
-    </div>
-  </header>
+  <div class="container">
+    <a href="#top" class="brand">MIRKOMIL</a>
+
+    <!-- Hamburger button (placed BEFORE the nav so CSS can animate it) -->
+    <button class="nav-toggle" aria-expanded="false"
+            aria-controls="primaryNav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Give your nav an id -->
+    <nav class="nav" id="primaryNav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
+    </nav>
+  </div>
+</header>
 
   <!-- HERO -->
   <section class="hero">
