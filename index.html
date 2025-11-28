@@ -1,12 +1,14 @@
+I can give you the **full, corrected HTML code** for your `index.html` file, which includes all the fixes we've discussed:
+
+1.  **CSS Separation:** The inline `<style>` block is removed and replaced with a link to your external `styles.css` file at the root.
+2.  **Email/Button Fix:** The structure of the social icons is corrected, making the email button functional and aligning the icons properly.
+3.  **Resume Link Fix:** Both resume links use the correct path: `asset/img/Mirkomil Oblokulov - Resume.pdf`.
+4.  **Projects Link Fix:** The first project link is updated to point to `projects/united-fc-campaign.html`.
+
+Here is the complete, updated `index.html` file:
+
+```html
 <!DOCTYPE html>
-<!--
-  Mirkomil Oblokulov — Portfolio (Green, single-file)
-  Edit basics:
-    - Colors: change --green / --green-dark below.
-    - Hero name/tagline: inside .hero.
-    - Photo path: /assets/img/headshot.jpg  (rename your image exactly to this).
-    - Resume path: /assets/Mirkomil_Oblokulov_Revised_Resume.pdf
--->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -14,8 +16,9 @@
   <title>Mirkomil Oblokulov — Portfolio</title>
   <meta name="description" content="Portfolio of Mirkomil Oblokulov — projects, experience, education, and skills." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230a6e3e'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='46' font-family='Arial' fill='white'%3EMIRK%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="styles.css" />
 
+  <link rel="stylesheet" href="styles.css" />
+  
 </head>
 <body>
   <script>
@@ -40,18 +43,15 @@
   window.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
 </script>
 
-  <!-- NAV -->
   <header class="site-header" id="top">
   <div class="container">
     <a href="#top" class="brand">MIRKOMIL</a>
 
-    <!-- Hamburger button (placed BEFORE the nav so CSS can animate it) -->
     <button class="nav-toggle" aria-expanded="false"
             aria-controls="primaryNav" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
 
-    <!-- Give your nav an id -->
     <nav class="nav" id="primaryNav">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -63,7 +63,6 @@
   </div>
 </header>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-text">
@@ -80,22 +79,15 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5z"/></svg>
           </a>
         </div>
-  </a>
-  <!-- envelope SVG stays the same -->
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5z"/></svg>
-</a>
-        </div>
         <a href="#about" class="scroll-cue" aria-label="Scroll to About">▼</a>
       </div>
 
-      <!-- Make sure this image exists at /assets/img/headshot.jpg -->
       <div class="hero-photo">
         <img src="asset/img/headshot.jpg" alt="Portrait of Mirkomil Oblokulov">
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about" class="section">
     <div class="container">
       <h2>About</h2>
@@ -103,7 +95,6 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
   <section id="projects" class="section">
     <div class="container">
       <h2>Projects</h2>
@@ -112,7 +103,7 @@
           <h3>United F.C. Digital Campaigns</h3>
           <p>Designed and executed social and email campaigns using Canva & MailChimp; improved website engagement and maintained brand consistency.</p>
           <p class="meta">Canva • MailChimp • Social</p>
-          <p><a href="#" target="_blank" rel="noreferrer">Case Notes (add)</a></p>
+          <p><a href="projects/united-fc-campaign.html" target="_blank" rel="noreferrer">Case Notes</a></p>
         </article>
         <article class="card">
           <h3>mirkomiloblokulov.com</h3>
@@ -128,7 +119,6 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
   <section id="experience" class="section">
     <div class="container">
       <h2>Experience</h2>
@@ -159,7 +149,6 @@
     </div>
   </section>
 
-  <!-- EDUCATION -->
   <section id="education" class="section">
     <div class="container">
       <h2>Education</h2>
@@ -181,7 +170,6 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section id="skills" class="section">
     <div class="container">
       <h2>Skills</h2>
@@ -195,11 +183,10 @@
     </div>
   </section>
 
-  <!-- RESUME -->
   <section id="resume" class="section">
     <div class="container">
       <h2>Resume</h2>
-<p><a class="btn" href="asset/img/Mirkomil Oblokulov - Resume.pdf" target="_blank" rel="noreferrer">Open Resume (PDF)</a></p>
+      <p><a class="btn" href="asset/img/Mirkomil Oblokulov - Resume.pdf" target="_blank" rel="noreferrer">Open Resume (PDF)</a></p>
     </div>
   </section>
 
@@ -233,3 +220,4 @@
   </script>
 </body>
 </html>
+```
