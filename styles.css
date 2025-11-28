@@ -1,3 +1,8 @@
+/* =====================================================================
+   styles.css — Green portfolio (full-screen hero + big tabs + hamburger)
+   ===================================================================== */
+
+/* ---- Theme + layout variables --------------------------------------- */
 :root{
   --green: #0a6e3e;        /* main accent */
   --green-dark: #074e2b;   /* navbar/footer */
@@ -168,4 +173,3 @@ p{ margin: 8px 0; }
   .tagline{ font-size: 15px; }
   .icon-btn{ width:44px; height:44px; }
 }
-
