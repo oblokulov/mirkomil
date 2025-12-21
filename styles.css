@@ -753,6 +753,68 @@ h2::after {
   gap: 16px;
 }
 
+/* ---- Project Accordion ---------------------------------------------- */
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.project-card.expanded {
+  transform: scale(1.01);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-card .card-preview {
+  margin-bottom: 16px;
+  color: var(--text-muted);
+}
+
+.project-details {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-details .detailed-desc {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.tech-tag {
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 6px;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.project-toggle {
+  margin-top: 16px;
+  width: 100%;
+}
+
 /* Carousel Controls */
 .carousel-btn {
   position: absolute;

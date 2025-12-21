@@ -4,9 +4,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mirkomil Oblokulov — Portfolio</title>
+
+  <!-- Primary SEO -->
+  <title>Mirkomil Oblokulov | Actuarial Science & Economics Student | Western University</title>
   <meta name="description"
-    content="Portfolio of Mirkomil Oblokulov — Actuarial Science, Economics, and Web Projects." />
+    content="Mirkomil Oblokulov - Actuarial Science and Economics student at Western University. CFA Level 1 candidate, Founder of Oakwood Home Services, and quantitative finance enthusiast. View projects in arbitrage detection, web development, and more." />
+  <meta name="keywords"
+    content="Mirkomil Oblokulov, Oblokulov, Actuarial Science, Economics, Western University, CFA, Quantitative Finance, Arbitrage, Oakwood Home Services, Portfolio, Toronto" />
+  <meta name="author" content="Mirkomil Oblokulov" />
+  <link rel="canonical" href="https://mirkomiloblokulov.com/" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,17 +31,18 @@
   rel="stylesheet">
 
   <!-- SEO & Social Media -->
-  <meta property="og:title" content="Mirkomil Oblokulov — Actuarial Science & Tech Portfolio" />
+  <meta property="og:title" content="Mirkomil Oblokulov | Actuarial Science Student & Entrepreneur" />
   <meta property="og:description"
-    content="Portfolio of Mirkomil Oblokulov: Actuarial Science & Economics student at Western University, Founder of Oakwood Home Services, and Quant enthusiast." />
+    content="Mirkomil Oblokulov - Actuarial Science & Economics at Western University. CFA candidate, Founder of Oakwood Home Services, skilled in Python, quantitative finance, and web development." />
   <meta property="og:image" content="https://mirkomiloblokulov.com/asset/img/headshot.jpg" />
   <meta property="og:url" content="https://mirkomiloblokulov.com/" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mirkomil Oblokulov Portfolio" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mirkomil Oblokulov — Portfolio" />
+  <meta name="twitter:title" content="Mirkomil Oblokulov | Portfolio" />
   <meta name="twitter:description"
-    content="Actuarial Science | Economics | Tech. View the portfolio of Mirkomil Oblokulov." />
+    content="View the professional portfolio of Mirkomil Oblokulov - Actuarial Science, Economics, Finance, and Tech projects." />
   <meta name="twitter:image" content="https://mirkomiloblokulov.com/asset/img/headshot.jpg" />
 
   <!-- Structured Data (JSON-LD) -->
@@ -44,9 +51,11 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Mirkomil Oblokulov",
+      "alternateName": "Oblokulov",
       "url": "https://mirkomiloblokulov.com",
       "image": "https://mirkomiloblokulov.com/asset/img/headshot.jpg",
-      "jobTitle": "Student & Founder",
+      "jobTitle": "Actuarial Science Student & Entrepreneur",
+      "description": "Actuarial Science and Economics student at Western University, CFA Level 1 candidate, Founder of Oakwood Home Services",
       "worksFor": {
         "@type": "Organization",
         "name": "Oakwood Home Services"
@@ -55,8 +64,10 @@
         "@type": "CollegeOrUniversity",
         "name": "Western University"
       },
+      "knowsAbout": ["Actuarial Science", "Economics", "Quantitative Finance", "Python", "Financial Modeling", "Risk Management", "Web Development"],
       "sameAs": [
-        "https://www.linkedin.com/in/mirkoomil"
+        "https://www.linkedin.com/in/mirkoomil",
+        "https://github.com/oblokulov"
       ]
     }
   </script>
@@ -240,50 +251,115 @@
         <h2>Selected Projects</h2>
         <div class="cards">
 
-          <article class="card">
+          <article class="card project-card" data-project="arbitrage">
             <div class="card-meta">Quant Finance & Engineering</div>
             <h3>Cross-Exchange Arbitrage Detection System</h3>
-            <p>
+            <p class="card-preview">
               Built an automated system that finds "sure-bet" opportunities across different sportsbooks.
-              It continuously scans global odds to detect price differences, letting users lock in a guaranteed profit
-              regardless of the game's outcome.
-              Includes real-time data processing and automated risk calculations.
+              It continuously scans global odds to detect price differences.
             </p>
-            <button onclick="openProject('arbitrage')" class="btn btn-outline"
-              style="font-size:0.8rem; padding:8px 16px;">View System details</button>
+
+            <div class="project-details" style="display: none;">
+              <p class="detailed-desc">
+                A sophisticated risk-neutral modeling engine designed to identify and exploit price inefficiencies
+                across global sports betting markets.
+                The system calculates implied probabilities to detect 'sure-bet' opportunities (Σ 1/o < 1). It features
+                  a robust ETL pipeline to normalize heterogeneous data and a Stochastic Risk Management module. </p>
+                  <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Pandas/NumPy</span>
+                    <span class="tech-tag">Rest APIs</span>
+                    <span class="tech-tag">ETL Pipelines</span>
+                    <span class="tech-tag">Risk Modeling</span>
+                  </div>
+            </div>
+
+            <button onclick="toggleProject('arbitrage')" class="btn btn-outline project-toggle"
+              style="font-size:0.8rem; padding:8px 16px;">
+              <span class="toggle-text">View Details</span>
+            </button>
           </article>
 
-          <article class="card">
+          <article class="card project-card" data-project="ufa">
             <div class="card-meta">Leadership & Tech</div>
             <h3>UFA Tech Club</h3>
-            <p>
-              Founded and led a student organization dedicated to promoting technology engagement. Developed the club's
-              WordPress website and established a content workflow that increased member participation by 40%.
+            <p class="card-preview">
+              Founded and led a student organization dedicated to promoting technology engagement.
             </p>
-            <button onclick="openProject('ufa')" class="btn btn-outline"
-              style="font-size:0.8rem; padding:8px 16px;">View Initiative</button>
+
+            <div class="project-details" style="display: none;">
+              <p class="detailed-desc">
+                Developed the club's WordPress website and established a content workflow that increased member
+                participation by 40%.
+                Managed a team of peers to organize workshops and events focused on technology education.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-tag">WordPress</span>
+                <span class="tech-tag">Leadership</span>
+                <span class="tech-tag">Event Planning</span>
+                <span class="tech-tag">Community Building</span>
+              </div>
+            </div>
+
+            <button onclick="toggleProject('ufa')" class="btn btn-outline project-toggle"
+              style="font-size:0.8rem; padding:8px 16px;">
+              <span class="toggle-text">View Details</span>
+            </button>
           </article>
 
-          <article class="card">
+          <article class="card project-card" data-project="united">
             <div class="card-meta">Digital Marketing</div>
             <h3>United F.C. Campaign</h3>
-            <p>
+            <p class="card-preview">
               A comprehensive digital marketing campaign involving targeted email automation and social media graphics.
-              Successfully improved website engagement metrics and brand visibility.
             </p>
-            <button onclick="openProject('united')" class="btn btn-outline"
-              style="font-size:0.8rem; padding:8px 16px;">View Case Study</button>
+
+            <div class="project-details" style="display: none;">
+              <p class="detailed-desc">
+                Successfully improved website engagement metrics and brand visibility through automated MailChimp flows
+                and branded Canva assets.
+                Achieved a 15% increase in seasonal sign-ups.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-tag">Canva</span>
+                <span class="tech-tag">MailChimp</span>
+                <span class="tech-tag">Social Media</span>
+                <span class="tech-tag">Data Analytics</span>
+              </div>
+            </div>
+
+            <button onclick="toggleProject('united')" class="btn btn-outline project-toggle"
+              style="font-size:0.8rem; padding:8px 16px;">
+              <span class="toggle-text">View Details</span>
+            </button>
           </article>
 
-          <article class="card">
+          <article class="card project-card" data-project="portfolio">
             <div class="card-meta">Web Development</div>
             <h3>Portfolio V2</h3>
-            <p>
-              You're looking at it. A performant, accessible personal website built with semantic HTML5 and modern CSS3
-              variables for theming. Features a responsive layout and SEO optimization.
+            <p class="card-preview">
+              You're looking at it. A performant, accessible personal website built with semantic HTML5.
             </p>
-            <button onclick="openProject('portfolio')" class="btn btn-outline"
-              style="font-size:0.8rem; padding:8px 16px;">View Source</button>
+
+            <div class="project-details" style="display: none;">
+              <p class="detailed-desc">
+                Features modern CSS3 with variables for theming, responsive layout, SEO optimization with JSON-LD
+                structured data,
+                and a custom Dark Mode design with glassmorphism UI elements.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">SEO</span>
+                <span class="tech-tag">Responsive Design</span>
+              </div>
+            </div>
+
+            <button onclick="toggleProject('portfolio')" class="btn btn-outline project-toggle"
+              style="font-size:0.8rem; padding:8px 16px;">
+              <span class="toggle-text">View Details</span>
+            </button>
           </article>
 
         </div>
