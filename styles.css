@@ -753,34 +753,80 @@ h2::after {
   gap: 16px;
 }
 
+/* Carousel Controls */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 5;
+  transition: 0.2s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev {
+  left: 0;
+}
+
+.carousel-btn.next {
+  right: 0;
+}
+
+.carousel-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
 /* ---- Contact Form --------------------------------------------------- */
 .contact-form {
-  max-width: 500px;
-  margin: 0 auto 32px;
+  max-width: 600px;
+  margin: 32px auto;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   text-align: left;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-light);
+  padding: 16px 20px;
+  background: #1e293b;
+  /* Explicit dark slate */
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  color: var(--text-main);
+  color: #f1f5f9;
+  /* Light text */
   font-family: var(--font-body);
   font-size: 1rem;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary);
-  background: rgba(255, 255, 255, 0.06);
+  background: #0f172a;
+  /* Darker on focus */
   box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1);
 }
 
