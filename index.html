@@ -11,6 +11,16 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Analytics (Replace G-XXXXXXXXXX with your actual ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
   rel="stylesheet">
 
@@ -238,7 +248,9 @@
               It continuously scans global odds to detect price differences, letting users lock in a guaranteed profit
               regardless of the game's outcome.
               Includes real-time data processing and automated risk calculations.
-            </p> <a href="#" class="btn btn-outline" style="font-size:0.8rem; padding:8px 16px;">View System details</a>
+            </p>
+            <button onclick="openProject('arbitrage')" class="btn btn-outline"
+              style="font-size:0.8rem; padding:8px 16px;">View System details</button>
           </article>
 
           <article class="card">
@@ -248,7 +260,8 @@
               Founded and led a student organization dedicated to promoting technology engagement. Developed the club's
               WordPress website and established a content workflow that increased member participation by 40%.
             </p>
-            <a href="#" class="btn btn-outline" style="font-size:0.8rem; padding:8px 16px;">View Initiative</a>
+            <button onclick="openProject('ufa')" class="btn btn-outline"
+              style="font-size:0.8rem; padding:8px 16px;">View Initiative</button>
           </article>
 
           <article class="card">
@@ -258,8 +271,8 @@
               A comprehensive digital marketing campaign involving targeted email automation and social media graphics.
               Successfully improved website engagement metrics and brand visibility.
             </p>
-            <a href="projects/united-fc-campaign.html" class="btn btn-outline"
-              style="font-size:0.8rem; padding:8px 16px;">View Case Study</a>
+            <button onclick="openProject('united')" class="btn btn-outline"
+              style="font-size:0.8rem; padding:8px 16px;">View Case Study</button>
           </article>
 
           <article class="card">
@@ -269,7 +282,8 @@
               You're looking at it. A performant, accessible personal website built with semantic HTML5 and modern CSS3
               variables for theming. Features a responsive layout and SEO optimization.
             </p>
-            <a href="#" class="btn btn-outline" style="font-size:0.8rem; padding:8px 16px;">View Source</a>
+            <button onclick="openProject('portfolio')" class="btn btn-outline"
+              style="font-size:0.8rem; padding:8px 16px;">View Source</button>
           </article>
 
         </div>
@@ -282,10 +296,21 @@
         <div class="contact-wrapper">
           <h2>Let's Work Together</h2>
           <p style="color:var(--text-muted); margin-bottom: 32px;">
-            I am always open to discussing internships in Actuarial Science, Economics, and Tech. <br>
-            Connect with me on LinkedIn or drop an email.
+            I am always open to discussing internships in Actuarial Science, Economics, and Tech.
           </p>
-          <a href="mailto:mirkomiloblokulov@gmail.com" class="btn">Send Email</a>
+
+          <form action="https://formspree.io/f/xjgbwqzz" method="POST" class="contact-form">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea name="message" rows="4" placeholder="How can I help you?" required></textarea>
+            </div>
+            <button type="submit" class="btn" style="width:100%">Send Message</button>
+          </form>
 
           <div class="socials">
             <a href="https://www.linkedin.com/in/mirkoomil" target="_blank" class="social-link" aria-label="LinkedIn">
@@ -311,6 +336,38 @@
       <p>© <span id="year"></span> Mirkomil Oblokulov.</p>
     </div>
   </footer>
+
+  <!-- PROJECT MODAL OVERLAY -->
+  <div class="modal-overlay" id="projectModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal" aria-label="Close Modal">✕</button>
+
+      <div class="modal-body">
+        <div class="modal-visuals">
+          <div class="modal-img-container">
+            <!-- Image injected via JS -->
+            <img id="modalImg" src="" alt="Project Preview">
+            <div class="modal-placeholder" id="modalPlaceholder">Preview Not Available</div>
+          </div>
+        </div>
+
+        <div class="modal-info">
+          <span class="modal-tag" id="modalTag">Category</span>
+          <h3 id="modalTitle">Project Title</h3>
+          <p id="modalDesc">Detailed project description goes here...</p>
+
+          <div class="modal-tech-stack" id="modalTech">
+            <!-- Tech tags injected via JS -->
+          </div>
+
+          <div class="modal-actions">
+            <!-- Actions injected via JS -->
+            <a href="#" id="modalLink" class="btn" target="_blank">View Live</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
