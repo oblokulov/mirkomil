@@ -1059,33 +1059,34 @@ h2::after {
 
   /* Typography Adjustments */
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     /* Fallback */
-    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    font-size: clamp(2rem, 8vw, 3rem);
+    line-height: 1.1;
   }
 
   h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .section {
-    padding: 60px 0;
+    padding: 48px 0;
   }
 
   /* Hero Section */
   .hero {
-    padding-top: calc(var(--nav-h) + 20px);
+    padding-top: calc(var(--nav-h) + 10px);
     min-height: auto;
-    padding-bottom: 60px;
+    padding-bottom: 48px;
   }
 
   .hero-inner {
-    gap: 32px;
+    gap: 24px;
   }
 
   .hero-photo {
-    width: 280px;
-    height: 280px;
+    width: 240px;
+    height: 240px;
   }
 
   .hero-actions {
