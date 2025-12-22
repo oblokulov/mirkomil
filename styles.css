@@ -433,7 +433,7 @@ h2::after {
 /* ---- Projects Grid -------------------------------------------------- */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
 }
 
@@ -1027,6 +1027,7 @@ h2::after {
   font-size: 1rem;
 }
 
+
 @media (max-width: 768px) {
   .modal-content {
     padding: 32px 24px;
@@ -1041,5 +1042,102 @@ h2::after {
     right: 10px;
     width: 44px;
     height: 44px;
+  }
+}
+
+/* ---- Extra Mobile Optimizations ------------------------------------- */
+
+@media (max-width: 480px) {
+  :root {
+    --container-width: 100%;
+    --nav-h: 60px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Typography Adjustments */
+  h1 {
+    font-size: 2.5rem;
+    /* Fallback */
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding-top: calc(var(--nav-h) + 20px);
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+
+  .hero-inner {
+    gap: 32px;
+  }
+
+  .hero-photo {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn,
+  .hero-actions .btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Resume/Skills */
+  .resume-summary {
+    padding: 24px;
+  }
+
+  /* Projects */
+  .cards {
+    grid-template-columns: 1fr;
+    /* Stack cards on very small screens */
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  /* Modals */
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+    /* Slide up from bottom feeling */
+  }
+
+  .modal-content {
+    border-radius: 24px 24px 0 0;
+    max-height: 85vh;
+    margin: 0;
+    width: 100%;
+    transform: translateY(100%);
+  }
+
+  .modal-overlay.active .modal-content {
+    transform: translateY(0);
+  }
+
+  .modal-close {
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
   }
 }
