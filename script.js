@@ -4,19 +4,40 @@
 
 /* ---- Project Data --------------------------------------------------- */
 const projectsData = {
+  aiSuite: {
+    title: "Integrated AI & Quantitative Automation Suite",
+    category: "AI & Quantitative Automation",
+    description: `A multi-system automation platform combining quantitative trading, agentic AI workflows, and technical infrastructure.
+
+Quantitative Crypto Trading:
+Engineered a trading algorithm using multivariate regression and triangular arbitrage to exploit price inefficiencies, generating $10,000+ in revenue. Computed risk-adjusted returns (Sharpe ratio) and maximum drawdown to evaluate strategy performance.
+
+Agentic System Design:
+Architected a multi-agent system using Claude and n8n to automate company communications, CRM development, and lead generation pipelines for both residential and commercial clients.
+
+Technical Infrastructure:
+• Managed secure REST API key integration across live market feeds
+• Debugged complex JSON data structures for seamless agent synchronization
+• Designed modular pipeline architecture for scalability`,
+    tech: ["n8n", "Python", "Claude API", "SQL", "REST APIs", "JSON", "Multivariate Regression", "Triangular Arbitrage"],
+    image: "",
+    link: "#",
+    linkText: "View Project"
+  },
   arbitrage: {
-    title: "Cross-Exchange Arbitrage Engine",
+    title: "Sports Arbitrage Detection Engine",
     category: "Quant Finance & Engineering",
-    description: `A sophisticated risk-neutral modeling engine designed to identify and exploit price inefficiencies across global sports betting markets.
+    description: `A multi-variable algorithm applying the arbitrage condition (A = 1/Oⁿ < 1) to calculate Total Implied Probability across global sportsbooks, generating $10,000+ in risk-free profit through expected value maximization.
 
-The system calculates implied probabilities to detect 'sure-bet' opportunities (Σ 1/o < 1). It features a robust ETL pipeline to normalize heterogeneous data from multiple bookmakers and a Stochastic Risk Management module to ensure consistent payouts regardless of event outcomes.
+Probability & Risk Analysis:
+Modelled probability distributions of match outcomes to quantify exposure and minimize probability of ruin. Implemented proportional staking formula (Stake = Total Investment × IP/TIP) to guarantee equal profit margins regardless of outcome.
 
-Key Features:
-• Real-time odds aggregation from 10+ exchanges
-• Automated stake calculation for optimal returns
-• Risk-neutral probability modeling
-• Latency-optimized execution pipeline`,
-    tech: ["Python", "Pandas/NumPy", "REST APIs", "ETL Pipelines", "Risk Modeling", "Stochastic Calculus"],
+Data Pipeline & API Integration:
+Developed custom scripts interfacing with multiple REST APIs, ingesting and normalizing thousands of real-time data points into a standardized JSON format for downstream analysis.
+
+Operational Risk Management:
+Implemented "Stealth Rounding" to manage operational risk from account detection, maintaining long-run profitability of the strategy.`,
+    tech: ["Python", "REST APIs", "JSON", "Probability Modelling", "Risk Analysis", "ETL Pipelines"],
     image: "",
     link: "#",
     linkText: "View System Logic"
