@@ -55,6 +55,23 @@ Key Results:
     link: "#",
     linkText: "View Case Study"
   },
+  financial: {
+    title: "Portfolio Optimization & CAPM Analysis",
+    category: "Finance & Quantitative Analysis",
+    description: `A comprehensive financial analysis of three diverse risky assets, a broad-based market index, and risk-free T-bills using data from September 2022 to August 2025.
+
+Working in a collaborative team, we utilized statistical software to process daily and weekly price series, calculating continuously compounded returns and constructing variance-covariance matrices to understand asset distributions.
+
+Key Components:
+• Optimal risky portfolio identification via Sharpe ratio maximization
+• Capital Allocation Line (CAL) derivation and visualization
+• CAPM evaluation: estimated asset betas and alphas
+• Robustness testing of market proxies and risk-free rate assumptions`,
+    tech: ["Financial Modeling", "Statistics", "CAPM", "Portfolio Theory", "Variance-Covariance Analysis", "Python / Excel"],
+    image: "",
+    link: "asset/img/financial-market-analysis.pdf",
+    linkText: "View Full Report (PDF)"
+  },
   portfolio: {
     title: "Personal Portfolio V2",
     category: "Web Development",
