@@ -164,6 +164,7 @@ const mTag = document.getElementById('modalTag');
 const mTech = document.getElementById('modalTech');
 const mImg = document.getElementById('modalImg');
 const mLink = document.getElementById('modalLink');
+const mVisuals = document.querySelector('.modal-visuals');
 
 function openProject(key) {
   const data = projectsData[key];
@@ -182,8 +183,10 @@ function openProject(key) {
     mImg.src = data.image;
     mImg.alt = data.title;
     mImg.style.display = 'block';
+    if (mVisuals) mVisuals.style.display = 'flex';
   } else {
     mImg.style.display = 'none';
+    if (mVisuals) mVisuals.style.display = 'none';
   }
 
   // Action Link
