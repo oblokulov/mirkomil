@@ -4,6 +4,25 @@
 
 /* ---- Project Data --------------------------------------------------- */
 const projectsData = {
+  coldOutreach: {
+    title: "Automated Cold Outreach Pipeline — Core Exterior",
+    category: "Automation & AI",
+    description: `A fully automated cold outreach pipeline built in n8n to streamline lead generation for Core Exterior, a commercial exterior maintenance company.
+
+The workflow integrates the Google Maps API for lead discovery, automates contact detection and email personalization using GPT-4.1-mini, and routes outreach through Gmail or direct contact form submissions based on lead type.
+
+All activity is logged to Google Sheets with built-in follow-up sequencing. Telegram alerts flag manual review items and warm replies for immediate attention.
+
+Key Results:
+• Reduced prospecting from hours of manual research to a hands-off, repeatable system
+• Covers Southern Ontario's full commercial property market
+• Full follow-up sequencing with zero manual input required
+• Warm reply detection with instant Telegram notifications`,
+    tech: ["n8n", "Google Maps API", "GPT-4.1-mini", "Gmail API", "Google Sheets", "Telegram Bot API"],
+    image: "asset/img/cold-outreach-pipeline.jpg",
+    link: "#",
+    linkText: "View Project"
+  },
   aiSuite: {
     title: "Integrated AI & Quantitative Automation Suite",
     category: "AI & Quantitative Automation",
