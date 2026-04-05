@@ -55,6 +55,28 @@ Key Results:
     link: "#",
     linkText: "View Case Study"
   },
+  econometrics: {
+    title: "Premier League Midfielder Wages — Regression Analysis",
+    category: "Econometrics & Data Science",
+    description: `An end-to-end econometrics project examining what drives the weekly wages of Premier League midfielders.
+
+Performance statistics were scraped from FBRef and combined with salary data from Capology, yielding a dataset of 261 professional players. Multiple regression models were built in STATA to test the hypothesis that creative playmaking is the primary performance driver for midfielder pay.
+
+Key Findings:
+• Assists are highly rewarded — a significant positive wage predictor
+• Club status (Big 6) is the dominant wage driver, often outweighing individual stats
+• Creative playmaking metrics validated as strong performance signals
+• Data and financial power intersect more than pure on-pitch merit alone
+
+Methodology:
+• Web scraping: FBRef (performance stats) + Capology (salary data)
+• OLS and multiple regression models in STATA
+• Controlled for club prestige, position, and age`,
+    tech: ["STATA", "OLS Regression", "Web Scraping", "Econometrics", "Data Cleaning", "Python"],
+    image: "",
+    link: "asset/img/midfielder-wages-econometrics.pdf",
+    linkText: "View Full Report (PDF)"
+  },
   financial: {
     title: "Portfolio Optimization & CAPM Analysis",
     category: "Finance & Quantitative Analysis",
