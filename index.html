@@ -1,447 +1,1785 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirkomil Oblokulov | Actuarial Science & Economics, Western University</title>
+<meta name="description" content="Mirkomil Oblokulov: Actuarial Science and Economics at Western University, varsity soccer player and COO of Core Exteriors. My story so far, played out as a match.">
+<meta name="author" content="Mirkomil Oblokulov">
+<link rel="canonical" href="https://www.mirkomiloblokulov.com/">
+<link rel="icon" href="asset/img/favicon-ball.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0F2B1A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mirkomil Oblokulov">
+<meta property="og:title" content="Mirkomil Oblokulov | My story, played out as a match">
+<meta property="og:description" content="Actuarial Science and Economics at Western, varsity soccer, and COO of Core Exteriors.">
+<meta property="og:url" content="https://www.mirkomiloblokulov.com/">
+<meta property="og:image" content="https://www.mirkomiloblokulov.com/asset/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mirkomil Oblokulov | My story, played out as a match">
+<meta name="twitter:description" content="Actuarial Science and Economics at Western, varsity soccer, and COO of Core Exteriors.">
+<meta name="twitter:image" content="https://www.mirkomiloblokulov.com/asset/img/og-card.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mirkomil Oblokulov",
+  "url": "https://www.mirkomiloblokulov.com/",
+  "image": "https://www.mirkomiloblokulov.com/asset/img/headshot-2025.jpg",
+  "jobTitle": "COO, Core Exteriors",
+  "description": "Actuarial Science and Economics student at Western University, varsity soccer player and COO of Core Exteriors.",
+  "affiliation": { "@type": "CollegeOrUniversity", "name": "Western University" },
+  "worksFor": { "@type": "Organization", "name": "Core Exteriors", "url": "https://corexteriors.ca" },
+  "sameAs": ["https://www.linkedin.com/in/mirkoomil", "https://github.com/oblokulov"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --stands: #0F2B1A;
+    --pitch-a: #1E5A36;
+    --pitch-b: #23643E;
+    --chalk: #F3F5EE;
+    --chalk-soft: rgba(243, 245, 238, 0.86);
+    --chalk-dim: rgba(243, 245, 238, 0.5);
+    --purple: #4F2683;
+    --purple-deep: #2E1650;
+    --lilac: #8C6BC8;
+    --led: #FFC233;
+    --miss: #D0533F;
+    --ink: #15201A;
+    --ball: 48px;
+  }
 
-  <!-- Primary SEO -->
-  <title>Mirkomil Oblokulov | Actuarial Science & Economics Student | Western University</title>
-  <meta name="description"
-    content="Mirkomil Oblokulov - Actuarial Science and Economics student at Western University. CFA Level 1 candidate, Founder of Oakwood Home Services, and quantitative finance enthusiast. View projects in arbitrage detection, web development, and more." />
-  <meta name="keywords"
-    content="Mirkomil Oblokulov, Oblokulov, Actuarial Science, Economics, Western University, CFA, Quantitative Finance, Arbitrage, Oakwood Home Services, Portfolio, Toronto" />
-  <meta name="author" content="Mirkomil Oblokulov" />
-  <link rel="canonical" href="https://mirkomiloblokulov.com/" />
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--stands);
+    color: var(--chalk);
+    font-family: "Archivo", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    font-variation-settings: "wdth" 100;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  .section-title, .fulltime h2 { overflow-wrap: break-word; }
+  a { color: inherit; }
+  button { font-family: inherit; }
+  [hidden] { display: none !important; }
+  :focus-visible { outline: 3px solid var(--led); outline-offset: 3px; border-radius: 4px; }
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  .cond {
+    font-family: "Archivo", "Arial Narrow", "Roboto Condensed", "Helvetica Neue", sans-serif;
+    font-stretch: 62%;
+    font-variation-settings: "wdth" 62;
+  }
 
-  <!-- Google Analytics (Replace G-XXXXXXXXXX with your actual ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+  /* Score bug, like the one in the corner of a TV broadcast */
+  .bug {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 30;
+    display: flex;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 1;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+    transform-origin: top left;
+  }
+  .bug > span { padding: 9px 10px 8px; }
+  .bug .team { background: var(--purple); color: #fff; letter-spacing: 0.05em; }
+  .bug .sc {
+    background: #fff;
+    color: var(--ink);
+    min-width: 2.1ch;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+  .bug .sc + .sc { border-left: 1px solid #D5D9CC; }
+  .bug .clock {
+    background: var(--ink);
+    color: var(--led);
+    min-width: 4.2ch;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+  .bug .goalword { display: none; }
+  .bug.goal .clock { background: var(--led); color: var(--ink); }
+  .bug.goal .goalword { display: inline; }
+  .bug.goal .time { display: none; }
+  .bug.goal { animation: bugpulse 0.9s ease-out; }
+  @keyframes bugpulse {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.18); }
+    100% { transform: scale(1); }
+  }
 
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
-    rel="stylesheet">
+  /* Top bar: contact links and sound */
+  .topbar {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 31;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tb {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px 9px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--chalk);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .tb:hover { background: var(--chalk); color: var(--ink); }
+  .tb.primary { background: var(--led); color: var(--ink); }
+  .tb.primary:hover { background: #fff; }
+  .contact { display: flex; gap: 8px; }
+  .contact-mini { display: none; position: relative; }
+  .menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    min-width: 220px;
+    padding: 8px;
+    background: var(--ink);
+    border-radius: 12px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+  }
+  .menu a {
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    color: var(--chalk);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .menu a:hover, .menu a:focus-visible { background: rgba(243, 245, 238, 0.1); }
+  .menu .addr { margin: 0; padding: 4px 12px 8px; font-size: 13px; color: var(--chalk-dim); overflow-wrap: anywhere; }
+  .sound { width: 38px; height: 36px; justify-content: center; padding: 0; }
+  .sound svg { width: 18px; height: 18px; }
+  .sound .label { display: none; }
+  .sound .wave { display: none; }
+  .sound[aria-pressed="true"] { background: var(--led); color: var(--ink); }
+  .sound[aria-pressed="true"] .wave { display: inline; }
+  .sound[aria-pressed="true"] .mute { display: none; }
 
-  <!-- SEO & Social Media -->
-  <meta property="og:title" content="Mirkomil Oblokulov | Actuarial Science Student & Entrepreneur" />
-  <meta property="og:description"
-    content="Mirkomil Oblokulov - Actuarial Science & Economics at Western University. CFA candidate, Founder of Oakwood Home Services, skilled in Python, quantitative finance, and web development." />
-  <meta property="og:image" content="https://mirkomiloblokulov.com/asset/img/og-image.jpg" />
-  <meta property="og:url" content="https://mirkomiloblokulov.com/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Mirkomil Oblokulov Portfolio" />
+  /* The ball that travels down the pitch */
+  .ball {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: var(--ball);
+    height: var(--ball);
+    margin: calc(var(--ball) / -2) 0 0 calc(var(--ball) / -2);
+    z-index: 20;
+    pointer-events: none;
+    filter: drop-shadow(0 9px 6px rgba(0, 0, 0, 0.35));
+    transition: opacity 0.3s ease, scale 0.3s ease;
+  }
+  .ball svg { width: 100%; height: 100%; display: block; }
+  .ball.hide { opacity: 0; scale: 0.5; }
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mirkomil Oblokulov | Portfolio" />
-  <meta name="twitter:description"
-    content="View the professional portfolio of Mirkomil Oblokulov - Actuarial Science, Economics, Finance, and Tech projects." />
-  <meta name="twitter:image" content="https://mirkomiloblokulov.com/asset/img/og-image.jpg" />
+  .confetti { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 25; pointer-events: none; }
 
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Mirkomil Oblokulov",
-      "alternateName": "Oblokulov",
-      "url": "https://mirkomiloblokulov.com",
-      "image": "https://mirkomiloblokulov.com/asset/img/headshot.jpg",
-      "jobTitle": "Actuarial Science Student & Entrepreneur",
-      "description": "Actuarial Science and Economics student at Western University, CFA Level 1 candidate, Founder of Oakwood Home Services",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Oakwood Home Services"
-      },
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Western University"
-      },
-      "knowsAbout": ["Actuarial Science", "Economics", "Quantitative Finance", "Python", "Financial Modeling", "Risk Management", "Web Development"],
-      "sameAs": [
-        "https://www.linkedin.com/in/mirkoomil",
-        "https://github.com/oblokulov"
-      ]
-    }
-  </script>
+  /* Match timeline along the bottom of the screen */
+  .timeline {
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    z-index: 30;
+    width: min(760px, calc(100vw - 24px));
+    height: 48px;
+    padding: 0 26px;
+    translate: -50% 0;
+    background: rgba(21, 32, 26, 0.92);
+    border-radius: 999px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    transition: transform 0.35s ease, opacity 0.35s ease;
+  }
+  .timeline.off { transform: translateY(160%); opacity: 0; pointer-events: none; }
+  .tl-track {
+    position: relative;
+    top: 22px;
+    height: 4px;
+    background: rgba(243, 245, 238, 0.2);
+    border-radius: 999px;
+  }
+  .tl-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--led); border-radius: 999px; }
+  .tl-mark {
+    position: absolute;
+    top: 50%;
+    left: var(--at);
+    width: 28px;
+    height: 28px;
+    translate: -50% -50%;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--chalk);
+    cursor: pointer;
+    opacity: 0.65;
+  }
+  .tl-mark.passed { opacity: 1; }
+  .tl-mark svg { width: 20px; height: 20px; }
+  .tl-mark .dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--ink);
+    border: 2px solid var(--chalk);
+    transition: scale 0.15s ease;
+  }
+  .tl-mark.passed .dot { background: var(--led); border-color: var(--led); }
+  .tl-mark.ht .dot { width: 5px; height: 20px; border-radius: 2px; border: 0; background: var(--chalk); }
+  .tl-mark:hover .dot, .tl-mark:focus-visible .dot { scale: 1.35; }
+  .tl-tip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 0;
+    translate: -50% 0;
+    padding: 7px 11px;
+    background: var(--chalk);
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+    white-space: nowrap;
+    border-radius: 6px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
+  .tl-tip.show { opacity: 1; }
 
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/jpeg" href="asset/img/favicon.jpg">
+  /* Hero */
+  .hero {
+    min-height: 94vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: end;
+    padding: 120px 24px 72px;
+    background:
+      radial-gradient(ellipse 60% 55% at 8% -12%, rgba(255, 255, 236, 0.16), transparent 70%),
+      radial-gradient(ellipse 60% 55% at 92% -12%, rgba(255, 255, 236, 0.16), transparent 70%),
+      var(--stands);
+  }
+  .hero-inner { width: 100%; max-width: 1120px; margin: 0 auto; min-width: 0; }
+  .hero h1 {
+    margin: 0 0 28px;
+    font-weight: 900;
+    font-size: clamp(76px, 15vw, 220px);
+    line-height: 0.84;
+    letter-spacing: -0.01em;
+    overflow-wrap: break-word;
+  }
+  .hero .lede {
+    max-width: 30em;
+    margin: 0 0 14px;
+    font-size: clamp(19px, 2vw, 23px);
+    line-height: 1.45;
+    color: var(--chalk-soft);
+  }
+  .hero .fixture { margin: 0 0 40px; color: var(--chalk-dim); }
+  .hero .fixture strong { color: var(--chalk); font-weight: 600; }
+  .cue {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: none;
+  }
+  .cue svg { width: 30px; height: 30px; }
+  .skip { margin: 18px 0 0; font-size: 15px; color: var(--chalk-dim); }
+  .skip a { color: var(--chalk); }
+
+  /* Team sheet */
+  .lineup { padding: 4vh 24px 9vh; }
+  .lineup-inner { max-width: 1120px; margin: 0 auto; }
+  .section-title {
+    margin: 0 0 10px;
+    font-weight: 900;
+    font-size: clamp(56px, 8vw, 110px);
+    line-height: 0.86;
+  }
+  .section-sub { margin: 0 0 30px; max-width: 34em; font-size: 19px; color: var(--chalk-soft); }
+  .lineup-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+  .tactics {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    border-radius: 8px;
+    overflow: hidden;
+    background: repeating-linear-gradient(90deg, var(--pitch-a) 0 10%, var(--pitch-b) 10% 20%);
+  }
+  .tactics svg.lines { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .tactics .lines-v { display: none; }
+  .player {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    translate: -50% -50%;
+    display: grid;
+    justify-items: center;
+    gap: 5px;
+    padding: 4px;
+    border: 0;
+    background: none;
+    color: var(--chalk);
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .player .disc {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--purple);
+    border: 2px solid var(--chalk);
+    font-weight: 800;
+    font-size: 21px;
+    line-height: 1;
+    transition: transform 0.15s ease, background 0.15s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  .player .nm {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1;
+    white-space: nowrap;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  }
+  .player:hover .disc { transform: scale(1.1); }
+  .player[aria-pressed="true"] .disc { background: var(--led); border-color: var(--led); color: var(--ink); transform: scale(1.12); }
+  .pcard {
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+    border: 2px solid var(--chalk-dim);
+    border-radius: 10px;
+  }
+  .pc-top { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+  .pc-num { font-weight: 900; font-size: 88px; line-height: 0.8; color: var(--led); font-variant-numeric: tabular-nums; }
+  .pc-pos { margin: 0 0 4px; font-size: 14px; color: var(--chalk-dim); }
+  .pc-name { margin: 0; font-weight: 800; font-size: 46px; line-height: 0.92; }
+  .pc-desc { margin: 0 0 22px; color: var(--chalk-soft); }
+  .pcard .btn { align-self: flex-start; }
+
+  /* The pitch */
+  .pitch {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 230px 0 230px;
+    border: 3px solid var(--chalk-dim);
+    background: repeating-linear-gradient(180deg, var(--pitch-a) 0 170px, var(--pitch-b) 170px 340px);
+    overflow: hidden;
+  }
+  .box {
+    position: absolute;
+    left: 50%;
+    width: 56%;
+    height: 190px;
+    transform: translateX(-50%);
+    border: 3px solid var(--chalk-dim);
+  }
+  .box.top { top: 0; border-top: 0; }
+  .box.bottom { bottom: 0; border-bottom: 0; }
+  .box .six {
+    position: absolute;
+    left: 50%;
+    width: 42%;
+    height: 66px;
+    transform: translateX(-50%);
+    border: 3px solid var(--chalk-dim);
+  }
+  .box.top .six { top: -3px; border-top: 0; }
+  .box.bottom .six { bottom: -3px; border-bottom: 0; }
+  .box .arc {
+    position: absolute;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    transform: translateX(-50%);
+    border: 3px solid var(--chalk-dim);
+    border-radius: 50%;
+  }
+  .box.top .arc { top: 50px; clip-path: inset(137px 0 0 0); }
+  .box.bottom .arc { bottom: 50px; clip-path: inset(0 0 137px 0); }
+
+  /* Match events */
+  .event {
+    position: relative;
+    width: 42%;
+    margin: 0 0 12vh;
+  }
+  .event.left { margin-left: 6%; }
+  .event.right { margin-left: 52%; }
+  .ev-head {
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .min {
+    font-weight: 900;
+    font-size: clamp(64px, 7.5vw, 104px);
+    line-height: 0.78;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 12px 6px;
+    border: 1.5px solid var(--chalk-dim);
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .chip svg { width: 17px; height: 17px; flex: none; }
+  .chip.goal { background: var(--led); border-color: var(--led); color: var(--ink); }
+  .event h3 {
+    margin: 0 0 12px;
+    font-weight: 800;
+    font-size: clamp(34px, 4vw, 50px);
+    line-height: 0.95;
+  }
+  .event p { margin: 0 0 12px; max-width: 34em; color: var(--chalk-soft); }
+  .event p.when { margin: 0; font-size: 14px; color: var(--chalk-dim); }
+  .event.has-photo {
+    width: 88%;
+    margin-left: 6%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.65fr);
+    column-gap: 12%;
+    align-items: start;
+  }
+  .event.right.has-photo { grid-template-columns: minmax(0, 0.65fr) minmax(0, 1fr); }
+  .event.right.has-photo .photo { order: -1; }
+  .photo {
+    margin: 0;
+    padding: 10px 10px 0;
+    background: #FBFBF7;
+    color: var(--ink);
+    border-radius: 3px;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+  }
+  .event.left .photo { rotate: 2deg; }
+  .event.right .photo { rotate: -2deg; }
+  .photo img { display: block; width: 100%; height: auto; }
+  .photo figcaption { padding: 9px 2px 11px; font-weight: 600; font-size: 15px; line-height: 1.2; }
+
+  /* The tape */
+  .replay {
+    width: min(900px, 88%);
+    margin: 0 auto 16vh;
+  }
+  .replay .ev-head { margin-bottom: 8px; }
+  .replay h3 {
+    margin: 0;
+    font-weight: 800;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 0.9;
+  }
+  .replay .sub { margin: 0 0 22px; color: var(--chalk-soft); }
+  .screen {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border: 10px solid var(--purple-deep);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 0 2px var(--chalk-dim), 0 30px 60px rgba(0, 0, 0, 0.35);
+  }
+  .screen iframe, .screen video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .play {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 18px;
+    width: 100%;
+    border: 0;
+    color: var(--chalk);
+    cursor: pointer;
+    background:
+      repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.035) 0 2px, transparent 2px 4px),
+      radial-gradient(circle at 50% 50%, rgba(79, 38, 131, 0.7), transparent 68%),
+      #000;
+  }
+  .play .disc {
+    display: grid;
+    place-items: center;
+    width: 92px;
+    height: 92px;
+    border: 3px solid var(--chalk);
+    border-radius: 50%;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .play .disc svg { width: 34px; height: 34px; margin-left: 6px; }
+  .play:hover .disc { background: rgba(243, 245, 238, 0.14); transform: scale(1.05); }
+  .play .label { font-weight: 700; font-size: clamp(22px, 2.6vw, 30px); }
+  .play .note { max-width: 26em; padding: 0 20px; font-size: 15px; color: var(--chalk-dim); text-align: center; }
+  .play.noted .disc { display: none; }
+
+  /* Halftime */
+  .halfway {
+    position: relative;
+    padding: 90px 16px;
+    margin: 0 0 12vh;
+  }
+  .halfway::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    border-top: 3px solid var(--chalk-dim);
+  }
+  .halfway .circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: min(840px, 112vw);
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    border: 3px solid var(--chalk-dim);
+    border-radius: 50%;
+  }
+  .board {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: clamp(26px, 4vw, 44px);
+    background: var(--purple);
+    border-radius: 6px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  }
+  .board .ev-head { margin-bottom: 10px; }
+  .board .min { color: var(--led); }
+  .board h2 {
+    margin: 0;
+    font-weight: 900;
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 0.8;
+  }
+  .board .lede { margin: 0 0 22px; font-size: 19px; color: var(--chalk-soft); }
+  .board dl { margin: 0; }
+  .board dl > div { padding: 14px 0; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+  .board dt { font-weight: 700; font-size: 25px; line-height: 1.1; margin-bottom: 4px; }
+  .board dd { margin: 0; color: var(--chalk-soft); }
+  .board dd a { color: var(--led); font-weight: 600; white-space: nowrap; }
+  .board .kit { margin: 18px 0 0; font-size: 15px; color: var(--chalk-dim); }
+
+  /* Monte Carlo simulator */
+  .sim {
+    width: min(900px, 88%);
+    margin: -4vh auto 16vh;
+    padding: clamp(24px, 4vw, 40px);
+    background: var(--ink);
+    border-radius: 10px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  }
+  .sim h3 { margin: 0 0 10px; font-weight: 800; font-size: clamp(38px, 4.6vw, 58px); line-height: 0.92; }
+  .sim > p { margin: 0 0 26px; max-width: 40em; color: var(--chalk-soft); }
+  .sim-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 20px 28px;
+    align-items: end;
+    margin-bottom: 30px;
+  }
+  .sim label { display: grid; gap: 10px; font-weight: 600; font-size: 15px; }
+  .sim label .row { display: flex; justify-content: space-between; gap: 12px; }
+  .sim output { color: var(--led); font-variant-numeric: tabular-nums; }
+  .sim input[type="range"] { width: 100%; margin: 0; accent-color: var(--led); }
+  .wdl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-bottom: 12px; }
+  .wdl .big { display: block; font-weight: 900; font-size: clamp(42px, 5vw, 66px); line-height: 0.9; font-variant-numeric: tabular-nums; }
+  .wdl .lab { font-size: 14px; color: var(--chalk-dim); }
+  .wdl .w .big { color: var(--led); }
+  .wdl .l .big { color: var(--lilac); }
+  .wdl-bar { display: flex; height: 12px; margin-bottom: 30px; border-radius: 999px; overflow: hidden; background: rgba(255, 255, 255, 0.08); }
+  .wdl-bar span { display: block; height: 100%; transition: width 0.35s ease; }
+  .wdl-bar .w { background: var(--led); }
+  .wdl-bar .d { background: var(--chalk-dim); }
+  .wdl-bar .l { background: var(--lilac); }
+  .sim h4 { margin: 0 0 12px; font-weight: 700; font-size: 24px; line-height: 1; }
+  .scores { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+  .scores li { display: grid; grid-template-columns: 64px 1fr 58px; gap: 12px; align-items: center; font-variant-numeric: tabular-nums; }
+  .scores .sl { font-weight: 800; font-size: 21px; line-height: 1; }
+  .scores .bar { height: 10px; border-radius: 999px; overflow: hidden; background: rgba(255, 255, 255, 0.08); }
+  .scores .bar span { display: block; height: 100%; background: var(--chalk-soft); transition: width 0.35s ease; }
+  .scores li:first-child .bar span { background: var(--led); }
+  .scores .pct { text-align: right; font-size: 15px; color: var(--chalk-soft); }
+  .sim .sim-note { margin: 20px 0 0; font-size: 14px; color: var(--chalk-dim); }
+
+  /* Goal net under the bottom goal line */
+  .net {
+    width: min(300px, 30%);
+    height: 84px;
+    margin: -3px auto 0;
+    border: 3px solid var(--chalk);
+    border-top: 0;
+    background:
+      repeating-linear-gradient(45deg, rgba(243, 245, 238, 0.28) 0 1px, transparent 1px 12px),
+      repeating-linear-gradient(-45deg, rgba(243, 245, 238, 0.28) 0 1px, transparent 1px 12px);
+  }
+
+  /* Full time */
+  .fulltime { padding: 10vh 24px 6vh; }
+  .ft-inner { max-width: 1120px; margin: 0 auto; }
+  .fulltime h2 {
+    margin: 0 0 10px;
+    font-weight: 900;
+    font-size: clamp(80px, 14vw, 200px);
+    line-height: 0.84;
+  }
+  .fulltime .final {
+    margin: 0 0 28px;
+    font-weight: 700;
+    font-size: clamp(26px, 3.2vw, 38px);
+    line-height: 1.1;
+    color: var(--led);
+  }
+  .fulltime p.next { max-width: 32em; margin: 0 0 32px; font-size: clamp(18px, 1.8vw, 21px); color: var(--chalk-soft); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
+  .btn {
+    display: inline-block;
+    padding: 15px 22px 14px;
+    border: 2px solid var(--chalk);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--chalk);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .btn:hover { background: var(--chalk); color: var(--ink); }
+  .btn.primary { background: var(--led); border-color: var(--led); color: var(--ink); }
+  .btn.primary:hover { background: #fff; border-color: #fff; }
+  .btn.small { padding: 12px 17px 11px; font-size: 15px; }
+  .email { margin: 0; color: var(--chalk-dim); font-size: 15px; }
+  .email a { color: var(--chalk); }
+
+  /* Penalty shootout */
+  .shootout { margin-top: 10vh; }
+  .extra { margin: 26px 0 0; color: var(--chalk-dim); }
+  .extra .btn { margin-left: 10px; }
+  .board .btn { margin-top: 20px; }
+  .pk-stage { position: relative; max-width: 700px; }
+  .pk-goal {
+    position: relative;
+    margin: 0 9%;
+    aspect-ratio: 3 / 1;
+    border: 8px solid var(--chalk);
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    background:
+      repeating-linear-gradient(45deg, rgba(243, 245, 238, 0.22) 0 1px, transparent 1px 14px),
+      repeating-linear-gradient(-45deg, rgba(243, 245, 238, 0.22) 0 1px, transparent 1px 14px),
+      rgba(0, 0, 0, 0.28);
+  }
+  .keeper {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 88%;
+    aspect-ratio: 60 / 80;
+    translate: -50% 0;
+    transform-origin: 50% 100%;
+    z-index: 1;
+  }
+  .keeper svg { display: block; width: 100%; height: 100%; }
+  .pk-zones {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .pk-zones button {
+    position: relative;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    cursor: crosshair;
+  }
+  .pk-zones button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 36px;
+    height: 36px;
+    translate: -50% -50%;
+    border: 2px dashed transparent;
+    border-radius: 50%;
+    transition: border-color 0.15s ease;
+  }
+  .pk-zones button:hover { background: rgba(255, 194, 51, 0.1); }
+  .pk-zones button:hover::after, .pk-zones button:focus-visible::after { border-color: var(--led); }
+  .pk-zones button:disabled { cursor: default; background: transparent; }
+  .pk-zones .zp {
+    position: absolute;
+    left: 9px;
+    top: 7px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1;
+    color: var(--chalk);
+    opacity: 0.8;
+    font-variant-numeric: tabular-nums;
+    pointer-events: none;
+  }
+  .pk-zones button:disabled .zp { opacity: 0.3; }
+  .pk-zones button:disabled::after { border-color: transparent; }
+  .pk-ground {
+    position: relative;
+    height: clamp(100px, 16vw, 140px);
+    border-top: 3px solid var(--chalk);
+    background: linear-gradient(180deg, var(--pitch-b), var(--pitch-a));
+    border-radius: 0 0 8px 8px;
+  }
+  .pk-spot { position: absolute; left: 50%; bottom: 24px; width: 8px; height: 8px; translate: -50% 0; border-radius: 50%; background: var(--chalk); }
+  .pk-ball {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    z-index: 3;
+    filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.35));
+  }
+  .pk-ball svg { display: block; width: 100%; height: 100%; }
+  .pk-status {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 20px;
+    max-width: 700px;
+    margin: 18px 0 6px;
+  }
+  .pk-kicks { display: flex; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .pk-kicks li { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--chalk-dim); }
+  .pk-kicks li.scored { background: var(--led); border-color: var(--led); }
+  .pk-kicks li.missed { background: var(--miss); border-color: var(--miss); }
+  .pk-odds { margin: 0; font-size: 15px; color: var(--chalk-soft); }
+  .pk-odds strong { color: var(--led); font-variant-numeric: tabular-nums; }
+  .pk-result { min-height: 1.3em; margin: 10px 0 16px; font-weight: 800; font-size: clamp(26px, 3vw, 36px); line-height: 1.1; }
+
+  footer { padding: 40px 24px 100px; text-align: center; font-size: 15px; color: var(--chalk-dim); }
+
+  @media (max-width: 860px) {
+    .lineup-grid { grid-template-columns: 1fr; }
+    .sim-controls { grid-template-columns: 1fr; }
+    .sim-controls .btn { justify-self: start; }
+  }
+
+  @media (max-width: 760px) {
+    :root { --ball: 34px; }
+    body { font-size: 16px; }
+    .bug { font-size: 16px; top: 10px; left: 10px; }
+    .bug > span { padding: 8px 8px 7px; }
+    .topbar { top: 10px; right: 10px; gap: 6px; }
+    .contact { display: none; }
+    .contact-mini { display: block; }
+    .tb { padding: 9px 13px 8px; }
+    .sound { width: 34px; height: 33px; padding: 0; }
+    .timeline { bottom: 10px; height: 44px; padding: 0 18px; }
+    .tl-track { top: 20px; }
+    .hero { padding: 90px 20px 56px; }
+    .lineup { padding: 4vh 16px 12vh; }
+    .tactics { aspect-ratio: 10 / 15; background: repeating-linear-gradient(180deg, var(--pitch-a) 0 10%, var(--pitch-b) 10% 20%); }
+    .tactics .lines-h { display: none; }
+    .tactics .lines-v { display: block; }
+    .player { left: var(--y); top: calc(100% - var(--x)); }
+    .player .disc { width: 40px; height: 40px; font-size: 18px; }
+    .player .nm { font-size: 12px; }
+    .pcard { padding: 22px; }
+    .pc-num { font-size: 72px; }
+    .pc-name { font-size: 40px; }
+    .pitch { margin: 0 8px; padding: 200px 0 200px; }
+    .box { width: 82%; height: 160px; }
+    .box .six { height: 54px; }
+    .box .arc { width: 120px; height: 120px; }
+    .box.top .arc { top: 46px; clip-path: inset(111px 0 0 0); }
+    .box.bottom .arc { bottom: 46px; clip-path: inset(0 0 111px 0); }
+    .event.has-photo { display: block; }
+    .photo, .event.left .photo, .event.right .photo { max-width: 290px; margin: 18px 0 0; rotate: 0deg; }
+    .photo.portrait, .event.left .photo.portrait, .event.right .photo.portrait { max-width: 210px; }
+    .event, .event.left, .event.right { width: auto; margin-left: 0; margin-right: 0; padding: 0 18px 0 60px; margin-bottom: 10vh; }
+    .replay { width: auto; margin: 0 12px 14vh; }
+    .screen { border-width: 6px; }
+    .play .disc { width: 70px; height: 70px; }
+    .play .note { font-size: 13px; }
+    .halfway { padding: 70px 12px; margin-bottom: 10vh; }
+    .sim { width: auto; margin: -2vh 12px 14vh; }
+    .extra .btn { margin: 10px 0 0; }
+    .wdl { gap: 8px; }
+    .wdl .big { font-size: 34px; }
+    .net { width: 46%; height: 64px; }
+    .pk-goal { margin: 0 4%; border-width: 6px; }
+    .pk-ball { width: 36px; height: 36px; margin-left: -18px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .bug.goal { animation: none; }
+    .ball, .timeline { transition: none; }
+  }
+</style>
 </head>
-
 <body>
 
-  <header class="site-header" id="top">
-    <div class="container">
-      <a href="#top" class="brand">MIRKOMIL<span>.</span></a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ball" viewBox="0 0 100 100"><clipPath id="bc"><circle cx="50" cy="50" r="47"/></clipPath><circle cx="50" cy="50" r="47" fill="#fbfbf7"/><g clip-path="url(#bc)" fill="#15201a"><polygon points="50.0,36.0 63.3,45.7 58.2,61.3 41.8,61.3 36.7,45.7"/><polygon points="68.2,24.9 62.8,8.1 77.0,-2.2 91.3,8.1 85.9,24.9"/><polygon points="79.5,59.6 93.7,49.2 108.0,59.6 102.6,76.4 84.9,76.4"/><polygon points="50.0,81.0 64.3,91.4 58.8,108.1 41.2,108.1 35.7,91.4"/><polygon points="20.5,59.6 15.1,76.4 -2.6,76.4 -8.0,59.6 6.3,49.2"/><polygon points="31.8,24.9 14.1,24.9 8.7,8.1 23.0,-2.2 37.2,8.1"/><path d="M50.0 36.0L50.0 22.0M50.0 22.0L68.2 24.9M50.0 22.0L31.8 24.9M63.3 45.7L76.6 41.3M76.6 41.3L68.2 24.9M76.6 41.3L79.5 59.6M58.2 61.3L66.5 72.7M66.5 72.7L79.5 59.6M66.5 72.7L50.0 81.0M41.8 61.3L33.5 72.7M33.5 72.7L50.0 81.0M33.5 72.7L20.5 59.6M36.7 45.7L23.4 41.3M23.4 41.3L20.5 59.6M23.4 41.3L31.8 24.9" stroke="#15201a" stroke-width="2.2" fill="none"/></g><circle cx="50" cy="50" r="47" fill="none" stroke="#15201a" stroke-width="3"/></symbol>
+  <symbol id="whistle" viewBox="0 0 26 18"><circle cx="9" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 3.5h15v5.5h-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="10" r="1.8" fill="currentColor"/></symbol>
+  <symbol id="transfer" viewBox="0 0 24 18"><path d="M3 5h15M14 1.5L18 5l-4 3.5M21 13H6M10 9.5L6 13l4 3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="armband" viewBox="0 0 24 16"><rect x="1" y="1" width="22" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14.6 5.3a3.7 3.7 0 1 0 0 5.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</svg>
 
-      <button class="nav-toggle" aria-label="Toggle Menu">☰</button>
+<div class="bug cond" aria-hidden="true" title="Oblokulov vs The Odds">
+  <span class="team">MIR</span>
+  <span class="sc" id="score-home">0</span>
+  <span class="sc">0</span>
+  <span class="team">ODDS</span>
+  <span class="clock"><span class="time" id="clock">0'</span><span class="goalword">GOAL</span></span>
+</div>
 
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="asset/img/Mirkomil Oblokulov - Resume.pdf" target="_blank" class="btn btn-outline"
-          style="padding: 8px 18px; border-radius: 12px; font-size: 0.9rem;">Resume</a>
-      </nav>
+<div class="topbar">
+  <nav class="contact" aria-label="Contact">
+    <a class="tb" href="asset/img/Mirkomil%20Oblokulov%20-%20Resume.pdf">Résumé</a>
+    <a class="tb" href="https://www.linkedin.com/in/mirkoomil">LinkedIn</a>
+    <a class="tb primary" href="mailto:oblokulovmirkomil@gmail.com">Email me</a>
+  </nav>
+  <div class="contact-mini">
+    <button class="tb primary" type="button" id="contact-toggle" aria-expanded="false" aria-controls="contact-menu">Contact</button>
+    <div class="menu" id="contact-menu" hidden>
+      <a href="asset/img/Mirkomil%20Oblokulov%20-%20Resume.pdf">Résumé (PDF)</a>
+      <a href="https://www.linkedin.com/in/mirkoomil">LinkedIn</a>
+      <a href="mailto:oblokulovmirkomil@gmail.com">Email me</a>
+      <p class="addr">oblokulovmirkomil@gmail.com</p>
     </div>
-  </header>
+  </div>
+  <button class="tb sound" id="sound" title="Sound" type="button" aria-pressed="false">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="mute" d="M16 9l5 6M21 9l-5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  <span class="label">Sound off</span>
+</button>
+</div>
 
-  <main>
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <span class="tagline">Data & Strategy</span>
-          <h1>Mirkomil <br /><span class="text-gradient">Oblokulov</span></h1>
-          <p style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 32px; max-width: 600px;">
-            Actuarial Science & Economics Student at <strong>Western University</strong>. <br>
-            I combine analytical rigor with digital problem-solving to build impactful solutions.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn">Let's Connect</a>
-            <a href="#experience" class="btn btn-outline">Explore My Work</a>
-          </div>
-        </div>
+<div class="ball hide" aria-hidden="true"><svg><use href="#ball"/></svg></div>
+<canvas class="confetti" aria-hidden="true"></canvas>
 
-        <div class="hero-photo-container">
-          <div class="hero-bg-decoration"></div>
-          <div class="hero-photo">
-            <img src="asset/img/headshot-2025.jpg" alt="Mirkomil Oblokulov">
-          </div>
-        </div>
+<nav class="timeline off" aria-label="Match timeline">
+  <div class="tl-track"><div class="tl-fill"></div></div>
+  <span class="tl-tip" aria-hidden="true"></span>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1 class="cond">Mirkomil<br>Oblokulov</h1>
+    <p class="lede">Born in Samarkand, now at Western for Actuarial Science and Economics, playing varsity soccer and running operations at a company I helped build. Here's my story so far, played out as a match.</p>
+    <p class="fixture">Today's fixture: <strong>Oblokulov vs The Odds</strong></p>
+    <a class="cue cond" href="#lineup"><svg aria-hidden="true"><use href="#ball"/></svg>See the team sheet</a>
+    <p class="skip">In a hurry? <a href="#fulltime">Skip to full time</a></p>
+  </div>
+</header>
+
+<section class="lineup" id="lineup" aria-labelledby="lineup-title">
+  <div class="lineup-inner">
+    <h2 class="section-title cond" id="lineup-title">Team sheet</h2>
+    <p class="section-sub">My starting XI is my toolkit. Pick a player to see where they've played.</p>
+    <div class="lineup-grid">
+      <div class="tactics" id="tactics" role="group" aria-label="Starting XI">
+        <svg class="lines lines-h" viewBox="0 0 160 100" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke="rgba(243,245,238,0.5)" stroke-width="2" vector-effect="non-scaling-stroke">
+          <rect x="3" y="3" width="154" height="94" vector-effect="non-scaling-stroke"/>
+          <line x1="80" y1="3" x2="80" y2="97" vector-effect="non-scaling-stroke"/>
+          <ellipse cx="80" cy="50" rx="13" ry="13" vector-effect="non-scaling-stroke"/>
+          <rect x="3" y="24" width="24" height="52" vector-effect="non-scaling-stroke"/>
+          <rect x="3" y="38" width="8" height="24" vector-effect="non-scaling-stroke"/>
+          <rect x="133" y="24" width="24" height="52" vector-effect="non-scaling-stroke"/>
+          <rect x="149" y="38" width="8" height="24" vector-effect="non-scaling-stroke"/>
+        </svg>
+        <svg class="lines lines-v" viewBox="0 0 100 150" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke="rgba(243,245,238,0.5)" stroke-width="2">
+          <rect x="3" y="3" width="94" height="144" vector-effect="non-scaling-stroke"/>
+          <line x1="3" y1="75" x2="97" y2="75" vector-effect="non-scaling-stroke"/>
+          <ellipse cx="50" cy="75" rx="13" ry="13" vector-effect="non-scaling-stroke"/>
+          <rect x="24" y="3" width="52" height="22" vector-effect="non-scaling-stroke"/>
+          <rect x="38" y="3" width="24" height="8" vector-effect="non-scaling-stroke"/>
+          <rect x="24" y="125" width="52" height="22" vector-effect="non-scaling-stroke"/>
+          <rect x="38" y="139" width="24" height="8" vector-effect="non-scaling-stroke"/>
+        </svg>
       </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About Me</h2>
-        <div class="about-grid">
-
-          <div class="about-text">
-            <p>
-              I am a driven second-year student pursuing a double major in <strong>Actuarial Science</strong> and
-              <strong>Economics</strong>. My academic journey is fueled by a passion for understanding financial risk
-              and economic models, which I aim to apply in the tech and finance sectors.
-            </p>
-            <p>
-              Discipline and leadership are at the core of my identity. As a varsity athlete for the <strong>Western
-                Men’s
-                Soccer Team</strong>, I've honed the ability to perform under pressure and collaborate effectively.
-              Previously, I
-              led my high school team to the OFSAA Championship as captain.
-            </p>
-            <p>
-              I am also bilingual, fluent in <strong>English</strong> with working proficiency in
-              <strong>French</strong> (Diplôme d'Études en
-              Langue Française features in my background).
-            </p>
-          </div>
-
-          <!-- Resume Summary Box -->
-          <div class="resume-summary">
-            <div class="resume-block mb-4">
-              <h4 class="resume-section-title">Education</h4>
-              <p style="margin-bottom:4px; font-weight:600; color:var(--text-main);">Western University (2023 - 2027)
-              </p>
-              <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:12px;">B.Sc. Actuarial Science &
-                Economics</p>
-            </div>
-
-            <div class="resume-block mb-4">
-              <h4 class="resume-section-title">Certifications & Exams</h4>
-              <ul class="cert-list">
-                <li>Actuarial Exam FM (Candidate, June 2026)</li>
-                <li>Microsoft Office Specialist: Excel Expert</li>
-              </ul>
-            </div>
-
-            <div class="resume-block mb-4">
-              <h4 class="resume-section-title">Leadership</h4>
-              <ul class="cert-list">
-                <li>Varsity Athlete: Western Men’s Soccer</li>
-                <li>King's KAMP Mentor</li>
-                <li>TCC Western Club</li>
-              </ul>
-
-              <div class="resume-block">
-                <h4 class="resume-section-title">Skills</h4>
-                <div class="skills-list">
-                  <span class="skill-tag">Python</span>
-                  <span class="skill-tag">SQL</span>
-                  <span class="skill-tag">R</span>
-                  <span class="skill-tag">VBA</span>
-                  <span class="skill-tag">Financial Modeling</span>
-                  <span class="skill-tag">Regression Analysis</span>
-                  <span class="skill-tag">Monte Carlo</span>
-                  <span class="skill-tag">Stochastic Modelling</span>
-                  <span class="skill-tag">Excel (Expert)</span>
-                  <span class="skill-tag">n8n</span>
-                  <span class="skill-tag">REST APIs</span>
-                  <span class="skill-tag">Git</span>
-                  <span class="skill-tag">French (B2)</span>
-                </div>
-              </div>
-            </div>
-
+      <div class="pcard" aria-live="polite">
+        <div class="pc-top">
+          <span class="pc-num cond" id="pc-num">8</span>
+          <div>
+            <p class="pc-pos" id="pc-pos">Central mid</p>
+            <h3 class="pc-name cond" id="pc-name">Python</h3>
           </div>
         </div>
-    </section>
-
-    <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="section">
-      <div class="container">
-        <h2>Professional Journey</h2>
-        <div class="timeline">
-
-          <div class="timeline-item">
-            <span class="timeline-date">March 2025 – Present</span>
-            <h3>Founder & COO</h3>
-            <span class="timeline-role">Core Exterior — London, ON</span>
-            <p>
-              Built revenue and cost models using regression analysis to project seasonal demand, managing a P&amp;L of
-              $70K+ across residential and commercial service lines. Engineered a proprietary CRM using Python and SQL
-              to centralize client data and automate lead management for a 20+ person team. Architected backend
-              workflows integrating quoting, invoicing, and scheduling using JSON data structures, and performed
-              cost-benefit analysis to scale revenue from zero to $70K+ within one operating season.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-date">March 2022 – Present</span>
-            <h3>Freelance Web Design & Data Consultant</h3>
-            <span class="timeline-role">Freelance</span>
-            <p>
-              Designed and optimized websites for small businesses, utilizing R and Excel for performance data analysis.
-              Conducted traffic segmentation and ROI evaluation to guide marketing improvements for global clients.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-date">Feb 2024 – Aug 2024</span>
-            <h3>Marketing & Consulting Intern</h3>
-            <span class="timeline-role">United F.C. — Toronto, ON</span>
-            <p>
-              Negotiated and secured high-value sponsorships with local business owners, improving the club's financial
-              sustainability. Applied cost-benefit analysis and vendor benchmarking to optimize operational resource
-              allocation. Designed and executed data-driven campaigns across LinkedIn and Google, scaling organic
-              engagement from 0 to 10,000+ views.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-date">Sep 2021 – May 2023</span>
-            <h3>Customer Service Support</h3>
-            <span class="timeline-role">Shoppers Drug Mart</span>
-            <p>
-              Delivered customer support and assisted store operations. Resolved issues and maintained inventory
-              accuracy.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Selected Projects</h2>
-        <div class="cards">
-
-          <article class="card project-card" data-project="coldOutreach">
-            <div class="card-meta">Automation & AI</div>
-            <h3>Automated Cold Outreach Pipeline — Core Exterior</h3>
-            <p class="card-preview">
-              Fully automated lead generation system using n8n, Google Maps API, and GPT-4.1-mini to prospect
-              commercial properties across Southern Ontario — hands-off and repeatable.
-            </p>
-            <button onclick="openProject('coldOutreach')" class="btn btn-outline project-toggle"
-              style="font-size:0.8rem; padding:8px 16px;">
-              <span class="toggle-text">View Details</span>
-            </button>
-          </article>
-
-          <article class="card project-card" data-project="aiSuite">
-            <div class="card-meta">AI & Quantitative Automation</div>
-            <h3>Integrated AI & Quantitative Automation Suite</h3>
-            <p class="card-preview">
-              Multi-agent system using Claude and n8n to automate CRM, communications, and lead generation,
-              combined with a crypto trading algorithm generating $10K+ via triangular arbitrage.
-            </p>
-            <button onclick="openProject('aiSuite')" class="btn btn-outline project-toggle"
-              style="font-size:0.8rem; padding:8px 16px;">
-              <span class="toggle-text">View Details</span>
-            </button>
-          </article>
-
-          <article class="card project-card" data-project="econometrics">
-            <div class="card-meta">Econometrics & Data Science</div>
-            <h3>Premier League Midfielder Wages — Regression Analysis</h3>
-            <p class="card-preview">
-              End-to-end econometrics project scraping 261 players from FBRef & Capology, using STATA
-              regression models to uncover what truly drives midfielder pay in the Premier League.
-            </p>
-            <button onclick="openProject('econometrics')" class="btn btn-outline project-toggle"
-              style="font-size:0.8rem; padding:8px 16px;">
-              <span class="toggle-text">View Details</span>
-            </button>
-          </article>
-
-          <article class="card project-card" data-project="financial">
-            <div class="card-meta">Finance & Quantitative Analysis</div>
-            <h3>Portfolio Optimization & CAPM Analysis</h3>
-            <p class="card-preview">
-              Comprehensive financial analysis covering optimal risky portfolio construction, Sharpe ratio
-              maximization, and rigorous CAPM evaluation across three risky assets and a market index.
-            </p>
-            <button onclick="openProject('financial')" class="btn btn-outline project-toggle"
-              style="font-size:0.8rem; padding:8px 16px;">
-              <span class="toggle-text">View Details</span>
-            </button>
-          </article>
-
-          <article class="card project-card" data-project="arbitrage">
-            <div class="card-meta">Quant Finance & Engineering</div>
-            <h3>Sports Arbitrage Detection Engine</h3>
-            <p class="card-preview">
-              Multi-variable algorithm applying the arbitrage condition across global sportsbooks,
-              generating $10,000+ in risk-free profit through expected value maximization.
-            </p>
-            <button onclick="openProject('arbitrage')" class="btn btn-outline project-toggle"
-              style="font-size:0.8rem; padding:8px 16px;">
-              <span class="toggle-text">View Details</span>
-            </button>
-          </article>
-
-          <article class="card project-card" data-project="ufa">
-            <div class="card-meta">Leadership & Tech</div>
-            <h3>UFA Tech Club</h3>
-            <p class="card-preview">
-              Founded and led a student organization dedicated to promoting technology engagement.
-            </p>
-            <button onclick="openProject('ufa')" class="btn btn-outline project-toggle"
-              style="font-size:0.8rem; padding:8px 16px;">
-              <span class="toggle-text">View Details</span>
-            </button>
-          </article>
-
-          <article class="card project-card" data-project="united">
-            <div class="card-meta">Digital Marketing</div>
-            <h3>United F.C. Campaign</h3>
-            <p class="card-preview">
-              A comprehensive digital marketing campaign involving targeted email automation and social media graphics.
-            </p>
-            <button onclick="openProject('united')" class="btn btn-outline project-toggle"
-              style="font-size:0.8rem; padding:8px 16px;">
-              <span class="toggle-text">View Details</span>
-            </button>
-          </article>
-
-          <article class="card project-card" data-project="portfolio">
-            <div class="card-meta">Web Development</div>
-            <h3>Portfolio V2</h3>
-            <p class="card-preview">
-              You're looking at it. A performant, accessible personal website built with semantic HTML5.
-            </p>
-            <button onclick="openProject('portfolio')" class="btn btn-outline project-toggle"
-              style="font-size:0.8rem; padding:8px 16px;">
-              <span class="toggle-text">View Details</span>
-            </button>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="contact-wrapper">
-          <h2>Let's Work Together</h2>
-          <p style="color:var(--text-muted); margin-bottom: 32px;">
-            I am always open to discussing internships in Actuarial Science, Economics, and Tech.
-          </p>
-
-          <form action="https://formspree.io/f/xjgbwqzz" method="POST" class="contact-form">
-            <div class="form-group">
-              <input type="text" name="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-              <textarea name="message" rows="4" placeholder="How can I help you?" required></textarea>
-            </div>
-            <button type="submit" class="btn" style="width:100%">Send Message</button>
-          </form>
-
-          <div class="socials">
-            <a href="https://www.linkedin.com/in/mirkoomil" target="_blank" class="social-link" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v16h-4zM8 8h3.8v2.2h.1c.5-1 1.7-2.3 3.6-2.3 3.8 0 4.5 2.5 4.5 5.8V24h-4v-7.2c0-1.7 0-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.7V24H8z" />
-              </svg>
-            </a>
-            <a href="https://github.com/oblokulov" target="_blank" class="social-link" aria-label="GitHub">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-              </svg>
-            </a>
-            <a href="asset/img/Mirkomil Oblokulov - Resume.pdf" target="_blank" class="social-link" aria-label="Resume">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                <path d="M14 2v6h6" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Mirkomil Oblokulov.</p>
-    </div>
-  </footer>
-
-  <!-- PROJECT MODAL OVERLAY -->
-  <div class="modal-overlay" id="projectModal" aria-hidden="true">
-    <div class="modal-content">
-      <button class="modal-close" id="closeModal" aria-label="Close Modal">✕</button>
-
-      <div class="modal-body">
-        <div class="modal-info">
-          <img id="modalImg" src="" alt="Project Preview" style="display:none; width:100%; border-radius:12px; margin-bottom:28px; object-fit:cover;">
-          <span class="modal-tag" id="modalTag">Category</span>
-          <h3 id="modalTitle">Project Title</h3>
-          <p id="modalDesc">Detailed project description goes here...</p>
-
-          <div class="modal-tech-stack" id="modalTech">
-            <!-- Tech tags injected via JS -->
-          </div>
-
-          <div class="modal-actions">
-            <a href="#" id="modalLink" class="btn" target="_blank">View Live</a>
-          </div>
-        </div>
+        <p class="pc-desc" id="pc-desc"></p>
+        <button class="btn small" type="button" id="pc-go">See it</button>
       </div>
     </div>
   </div>
+</section>
 
-  <script src="script.js"></script>
+<main class="pitch" id="kickoff">
+  <div class="box top" aria-hidden="true"><div class="six"></div><div class="arc"></div></div>
+
+  <article class="event left has-photo" id="ev-1" data-minute="1" data-side="left" data-kind="kickoff" data-title="Samarkand">
+    <div class="ev-text">
+      <div class="ev-head"><span class="min cond">1'</span><span class="chip"><svg aria-hidden="true"><use href="#whistle"/></svg>Kickoff</span></div>
+      <h3 class="cond">Samarkand</h3>
+      <p>I was born in Samarkand, Uzbekistan, one of the oldest cities in Central Asia and a crossroads of the old Silk Road. That's where this match kicks off.</p>
+      <p class="when">Samarkand, Uzbekistan</p>
+    </div>
+    <figure class="photo portrait"><img src="asset/img/story/samarkand.jpg" width="825" height="1100" loading="lazy" alt="Mirkomil at night in front of the lit-up madrasahs of Registan Square in Samarkand"><figcaption>Registan, Samarkand</figcaption></figure>
+  </article>
+
+  <article class="event right has-photo" id="ev-7" data-minute="7" data-side="right" data-kind="transfer" data-title="Transfer to Toronto">
+    <div class="ev-text">
+      <div class="ev-head"><span class="min cond">7'</span><span class="chip"><svg aria-hidden="true"><use href="#transfer"/></svg>Transfer</span></div>
+      <h3 class="cond">Transfer to Toronto</h3>
+      <p>In 2016 I moved to Toronto. Every career has one big transfer, and this was mine.</p>
+      <p class="when">Toronto, 2016</p>
+    </div>
+    <figure class="photo portrait"><img src="asset/img/story/toronto.jpg" width="825" height="1100" loading="lazy" alt="Mirkomil at night below the CN Tower in Toronto"><figcaption>Toronto</figcaption></figure>
+  </article>
+
+  <article class="event left has-photo" id="ev-13" data-minute="13" data-side="left" data-kind="captain" data-title="The armband">
+    <div class="ev-text">
+      <div class="ev-head"><span class="min cond">13'</span><span class="chip"><svg aria-hidden="true"><use href="#armband"/></svg>Captain</span></div>
+      <h3 class="cond">The armband</h3>
+      <p>At Ursula Franklin Academy, I captained the soccer team and led us to the OFSAA Championship. That's where I learned to keep a group organized under pressure.</p>
+      <p class="when">Ursula Franklin Academy, Toronto</p>
+    </div>
+    <figure class="photo landscape"><img src="asset/img/story/ofsaa.jpg" width="875" height="700" loading="lazy" alt="The Ursula Franklin Academy soccer team posing behind an OFSAA banner"><figcaption>UFA at OFSAA</figcaption></figure>
+  </article>
+
+  <article class="event right has-photo" id="ev-20" data-minute="20" data-side="right" data-kind="goal" data-title="Athlete of the Year" data-goal>
+    <div class="ev-text">
+      <div class="ev-head"><span class="min cond">20'</span><span class="chip goal"><svg aria-hidden="true"><use href="#ball"/></svg>Goal, 1 : 0</span></div>
+      <h3 class="cond">Athlete of the Year</h3>
+      <p>Named Ursula Franklin Academy's Senior Male Athlete of the Year for 2022/23. First goal on the board.</p>
+      <p class="when">Ursula Franklin Academy, 2022/23</p>
+    </div>
+    <figure class="photo landscape"><img src="asset/img/story/athlete-of-the-year.jpg" width="1100" height="731" loading="lazy" alt="Mirkomil receiving the UFA Senior Male Athlete of the Year award"><figcaption>Senior Male Athlete of the Year</figcaption></figure>
+  </article>
+
+  <article class="event left" id="ev-24" data-minute="24" data-side="left" data-kind="touch" data-title="First clients">
+    <div class="ev-head"><span class="min cond">24'</span><span class="chip">First touch</span></div>
+    <h3 class="cond">First clients</h3>
+    <p>I started building websites and running performance analysis for small businesses, some local and some overseas. My first taste of getting paid to solve a problem.</p>
+    <p class="when">Freelance, since March 2022</p>
+  </article>
+
+  <article class="event right" id="ev-30" data-minute="30" data-side="right" data-kind="goal" data-title="Two majors, one varsity kit" data-goal>
+    <div class="ev-head"><span class="min cond">30'</span><span class="chip goal"><svg aria-hidden="true"><use href="#ball"/></svg>Goal, 2 : 0</span></div>
+    <h3 class="cond">Two majors, one varsity kit</h3>
+    <p>Got into Western for a double major in Actuarial Science and Economics, and made the Western Men's Soccer team. Risk models in the lecture hall, real pressure on the pitch.</p>
+    <p class="when">Western University</p>
+  </article>
+
+  <section class="replay wide" id="ev-36" data-minute="36" data-side="center" data-kind="tape" data-title="The tape" aria-labelledby="tape-title">
+    <div class="ev-head"><span class="min cond">36'</span><h3 class="cond" id="tape-title">The tape</h3></div>
+    <p class="sub">Highlights from my time on the pitch.</p>
+    <div class="screen" id="screen">
+      <button class="play" type="button" id="play">
+        <span class="disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z" fill="currentColor"/></svg></span>
+        <span class="label cond">Watch the highlight tape</span>
+        <span class="note" id="note" hidden></span>
+      </button>
+    </div>
+  </section>
+
+  <article class="event left" id="ev-41" data-minute="41" data-side="left" data-kind="assist" data-title="Setting up a club">
+    <div class="ev-head"><span class="min cond">41'</span><span class="chip">Assist</span></div>
+    <h3 class="cond">Setting up a club</h3>
+    <p>Marketing and consulting intern at United F.C. in Toronto. I worked on sponsorships, benchmarked vendors, and ran campaigns that pushed engagement past 10,000 views.</p>
+    <p class="when">United F.C., February to August 2024</p>
+  </article>
+
+  <section class="halfway" aria-labelledby="ht-title">
+    <div class="circle" aria-hidden="true"></div>
+    <div class="board wide" id="ev-45" data-minute="45" data-side="center" data-kind="ht" data-title="Halftime">
+      <div class="ev-head"><span class="min cond">45'</span><h2 class="cond" id="ht-title">Halftime</h2></div>
+      <p class="lede">Same game, different angle. I started asking what the numbers say about it.</p>
+      <dl>
+        <div><dt class="cond">What a midfielder is worth</dt><dd>I scraped FBref stats and Capology salaries and ran OLS regressions in STATA. Club status (Big 6) drives wages more than individual stats. <a href="asset/img/midfielder-wages-econometrics.pdf">Read the report (PDF)</a></dd></div>
+        <div><dt class="cond">Portfolio optimization</dt><dd>With my team, I found the optimal risky portfolio by maximizing the Sharpe ratio and tested CAPM betas and alphas on 2022 to 2025 data. <a href="asset/img/financial-market-analysis.pdf">Read the report (PDF)</a></dd></div>
+        <div><dt class="cond">Arbitrage detection engine</dt><dd>Scans bookmaker odds across sites and flags mispriced markets.</dd></div>
+        <div><dt class="cond">Triangular arbitrage bot</dt><dd>Written in C, it looks for pricing gaps across three linked markets.</dd></div>
+      </dl>
+      <p class="kit">Python, SQL, R, C, VBA, Monte Carlo simulation, Microsoft Excel Expert certified.</p>
+      <button class="btn small" type="button" id="sim-toggle" aria-expanded="false" aria-controls="sim">Simulate the second half</button>
+    </div>
+  </section>
+
+  <section class="sim wide" id="sim" aria-labelledby="sim-title" hidden>
+    <h3 class="cond" id="sim-title">Simulate the second half</h3>
+    <p>It's 2 : 0 at the break. Set how often each side scores, and this runs 10,000 second halves with goals arriving at random. It's a Monte Carlo simulation, the same idea that sits behind a lot of risk modelling.</p>
+    <div class="sim-controls">
+      <label for="rate-a"><span class="row">Oblokulov goals per 90 <output id="rate-a-out" for="rate-a">2.0</output></span><input type="range" id="rate-a" min="0" max="4" step="0.1" value="2"></label>
+      <label for="rate-b"><span class="row">The Odds goals per 90 <output id="rate-b-out" for="rate-b">1.0</output></span><input type="range" id="rate-b" min="0" max="4" step="0.1" value="1"></label>
+      <button class="btn primary" type="button" id="run-sim">Run 10,000 simulations</button>
+    </div>
+    <div aria-live="polite">
+      <div class="wdl">
+        <div class="w"><span class="big cond" id="p-w">0%</span><span class="lab">Oblokulov win</span></div>
+        <div class="d"><span class="big cond" id="p-d">0%</span><span class="lab">Draw</span></div>
+        <div class="l"><span class="big cond" id="p-l">0%</span><span class="lab">The Odds win</span></div>
+      </div>
+      <div class="wdl-bar" aria-hidden="true"><span class="w"></span><span class="d"></span><span class="l"></span></div>
+      <h4 class="cond">Most likely final scores</h4>
+      <ol class="scores" id="scores"></ol>
+    </div>
+    <p class="sim-note">Goals are drawn from a Poisson distribution for each side. Move a slider and it reruns.</p>
+  </section>
+
+  <article class="event right" id="ev-58" data-minute="58" data-side="right" data-kind="goal" data-title="Starting a company" data-goal>
+    <div class="ev-head"><span class="min cond">58'</span><span class="chip goal"><svg aria-hidden="true"><use href="#ball"/></svg>Goal, 3 : 0</span></div>
+    <h3 class="cond">Starting a company</h3>
+    <p>Launched Core Exteriors, a commercial exterior maintenance company serving Southern Ontario, and took on the COO role: pricing, cost models, invoicing and the books.</p>
+    <p class="when">London, Ontario</p>
+  </article>
+
+  <article class="event left" id="ev-72" data-minute="72" data-side="left" data-kind="goal" data-title="Building the machine" data-goal>
+    <div class="ev-head"><span class="min cond">72'</span><span class="chip goal"><svg aria-hidden="true"><use href="#ball"/></svg>Goal, 4 : 0</span></div>
+    <h3 class="cond">Building the machine</h3>
+    <p>Wrote our CRM in Python and SQL, then automated outreach and invoicing with n8n so quotes, follow-ups and invoices don't slip through the cracks. Over $70K in revenue in 2026.</p>
+    <p class="when">Core Exteriors</p>
+  </article>
+
+  <article class="event right" id="ev-84" data-minute="84" data-side="right" data-kind="captain" data-title="Leading off the pitch">
+    <div class="ev-head"><span class="min cond">84'</span><span class="chip"><svg aria-hidden="true"><use href="#armband"/></svg>Captain</span></div>
+    <h3 class="cond">Leading off the pitch</h3>
+    <p>VP Outreach for the Turkic Cultural Club at Western, a club of 200+ members, where I handle sponsorships, funding and collaborations with other clubs. Also a mentor in the King's KAMP program.</p>
+    <p class="when">Western University</p>
+  </article>
+
+  <div class="box bottom" aria-hidden="true"><div class="six"></div><div class="arc"></div></div>
+</main>
+<div class="net" aria-hidden="true"></div>
+
+<section class="fulltime" id="fulltime" aria-labelledby="ft-title">
+  <div class="ft-inner">
+    <h2 class="cond" id="ft-title">Full time</h2>
+    <p class="final cond">Oblokulov 4, The Odds 0</p>
+    <p class="next">Next fixture: actuarial, economics and tech roles where models turn into real decisions. If your team needs someone who can build the model and then ship the tool around it, let's talk.</p>
+    <div class="actions">
+      <a class="btn primary" href="mailto:oblokulovmirkomil@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/mirkoomil">LinkedIn</a>
+      <a class="btn" href="asset/img/Mirkomil%20Oblokulov%20-%20Resume.pdf">Résumé (PDF)</a>
+    </div>
+    <p class="email">Or write to <a href="mailto:oblokulovmirkomil@gmail.com">oblokulovmirkomil@gmail.com</a></p>
+    <p class="extra">Still here?<button class="btn small" type="button" id="pk-open" aria-expanded="false" aria-controls="shootout">Take a penalty</button></p>
+
+    <section class="shootout" id="shootout" aria-labelledby="pk-title" hidden>
+      <h2 class="section-title cond" id="pk-title">Penalties</h2>
+      <p class="section-sub">Five kicks against The Odds' keeper. Pick a spot in the goal, but he learns your habits.</p>
+      <div class="pk-stage">
+        <div class="pk-goal" id="pk-goal">
+          <div class="keeper" id="keeper" aria-hidden="true">
+            <svg viewBox="0 0 60 80"><g fill="#8C6BC8"><circle cx="30" cy="12" r="8"/><rect x="21" y="21" width="18" height="31" rx="6"/><rect x="5" y="23" width="50" height="7" rx="3.5"/><rect x="22" y="48" width="7" height="30" rx="3.5"/><rect x="31" y="48" width="7" height="30" rx="3.5"/></g><g fill="#FFC233"><circle cx="5" cy="26.5" r="5"/><circle cx="55" cy="26.5" r="5"/></g></svg>
+          </div>
+          <div class="pk-zones" id="pk-zones"></div>
+        </div>
+        <div class="pk-ground"><span class="pk-spot"></span><div class="pk-ball" id="pk-ball" aria-hidden="true"><svg><use href="#ball"/></svg></div></div>
+      </div>
+      <div class="pk-status">
+        <ol class="pk-kicks" id="pk-kicks" aria-label="Kicks taken"><li></li><li></li><li></li><li></li><li></li></ol>
+        <p class="pk-odds" id="pk-odds"></p>
+      </div>
+      <p class="pk-result cond" id="pk-result" aria-live="polite"></p>
+      <button class="btn" type="button" id="pk-reset" hidden>Take five more</button>
+    </section>
+  </div>
+</section>
+
+<footer>&copy; 2026 Mirkomil Oblokulov. <a href="https://github.com/oblokulov">GitHub</a></footer>
+
+<script>
+(() => {
+  // Paste your highlight tape link here: a YouTube link, a Hudl video link, or a path to an .mp4 file.
+  const HIGHLIGHT_URL = "";
+  // Until a link is added, the tape moment stays off the page.
+  if (!HIGHLIGHT_URL.trim()) {
+    const tape = document.getElementById("ev-36");
+    if (tape) tape.remove();
+  }
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const docTop = (el) => el.getBoundingClientRect().top + window.scrollY;
+
+  /* ---------- Sound (made in the browser, off until you turn it on) ---------- */
+  const Sound = (() => {
+    let ctx = null;
+    let on = false;
+    const btn = $("#sound");
+
+    function ensure() {
+      if (!ctx) {
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (AC) ctx = new AC();
+      }
+      if (ctx && ctx.state === "suspended") ctx.resume();
+    }
+    function noise(sec) {
+      const len = Math.floor(ctx.sampleRate * sec);
+      const buf = ctx.createBuffer(1, len, ctx.sampleRate);
+      const d = buf.getChannelData(0);
+      for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+      return buf;
+    }
+    function whistle(parts) {
+      if (!on || !ctx) return;
+      let t = ctx.currentTime + 0.03;
+      parts.forEach((len) => {
+        const osc = ctx.createOscillator();
+        const lfo = ctx.createOscillator();
+        const depth = ctx.createGain();
+        const g = ctx.createGain();
+        osc.frequency.value = 2850;
+        lfo.frequency.value = 32;
+        depth.gain.value = 90;
+        lfo.connect(depth).connect(osc.frequency);
+        g.gain.setValueAtTime(0, t);
+        g.gain.linearRampToValueAtTime(0.1, t + 0.02);
+        g.gain.setValueAtTime(0.1, t + len - 0.04);
+        g.gain.linearRampToValueAtTime(0, t + len);
+        osc.connect(g).connect(ctx.destination);
+        osc.start(t); lfo.start(t);
+        osc.stop(t + len + 0.02); lfo.stop(t + len + 0.02);
+        t += len + 0.12;
+      });
+    }
+    function crowd(level, freq, dur) {
+      if (!on || !ctx) return;
+      const t = ctx.currentTime + 0.01;
+      const src = ctx.createBufferSource();
+      src.buffer = noise(dur);
+      const bp = ctx.createBiquadFilter();
+      bp.type = "bandpass";
+      bp.frequency.value = freq;
+      bp.Q.value = 0.6;
+      const g = ctx.createGain();
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(level, t + 0.25);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      src.connect(bp).connect(g).connect(ctx.destination);
+      src.start(t);
+      src.stop(t + dur);
+    }
+    function thump() {
+      if (!on || !ctx) return;
+      const t = ctx.currentTime + 0.01;
+      const osc = ctx.createOscillator();
+      const g = ctx.createGain();
+      osc.frequency.setValueAtTime(160, t);
+      osc.frequency.exponentialRampToValueAtTime(55, t + 0.12);
+      g.gain.setValueAtTime(0.5, t);
+      g.gain.exponentialRampToValueAtTime(0.001, t + 0.15);
+      osc.connect(g).connect(ctx.destination);
+      osc.start(t);
+      osc.stop(t + 0.16);
+    }
+
+    btn.addEventListener("click", () => {
+      on = !on;
+      try { if (on) ensure(); } catch (e) { on = false; }
+      if (!ctx) on = false;
+      btn.setAttribute("aria-pressed", String(on));
+      btn.querySelector(".label").textContent = on ? "Sound on" : "Sound off";
+      btn.setAttribute("aria-label", on ? "Turn sound off" : "Turn sound on");
+      if (on) whistle([0.3]);
+    });
+    btn.setAttribute("aria-label", "Turn sound on");
+
+    return {
+      whistle,
+      cheer: () => crowd(0.35, 900, 2.2),
+      groan: () => crowd(0.18, 420, 1.1),
+      thump,
+    };
+  })();
+
+  /* ---------- Contact menu on phones ---------- */
+  (() => {
+    const btn = $("#contact-toggle"), menu = $("#contact-menu");
+    const set = (open) => { menu.hidden = !open; btn.setAttribute("aria-expanded", String(open)); };
+    btn.addEventListener("click", (e) => { e.stopPropagation(); set(menu.hidden); });
+    document.addEventListener("click", (e) => { if (!menu.hidden && !menu.contains(e.target)) set(false); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !menu.hidden) { set(false); btn.focus(); } });
+  })();
+
+  /* ---------- Confetti ---------- */
+  const Confetti = (() => {
+    const cv = $(".confetti");
+    const c2 = cv.getContext("2d");
+    const colors = ["#FFC233", "#F3F5EE", "#8C6BC8", "#4F2683"];
+    let parts = [];
+    let running = false;
+    let dpr = 1;
+    function size() {
+      dpr = Math.min(2, window.devicePixelRatio || 1);
+      cv.width = window.innerWidth * dpr;
+      cv.height = window.innerHeight * dpr;
+    }
+    size();
+    window.addEventListener("resize", size);
+    function tick() {
+      c2.setTransform(dpr, 0, 0, dpr, 0, 0);
+      c2.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      parts = parts.filter((p) => p.life < p.max);
+      parts.forEach((p) => {
+        p.life++;
+        p.vy += 0.28;
+        p.vx *= 0.985;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.r += p.vr;
+        c2.save();
+        c2.globalAlpha = Math.max(0, 1 - p.life / p.max);
+        c2.translate(p.x, p.y);
+        c2.rotate(p.r);
+        c2.fillStyle = p.c;
+        c2.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        c2.restore();
+      });
+      if (parts.length) requestAnimationFrame(tick);
+      else running = false;
+    }
+    function burst(x, y, n = 70) {
+      if (reduce) return;
+      for (let i = 0; i < n; i++) {
+        const a = Math.random() * Math.PI * 2;
+        const s = 3 + Math.random() * 7;
+        parts.push({
+          x, y,
+          vx: Math.cos(a) * s,
+          vy: Math.sin(a) * s - 4,
+          r: Math.random() * 6.28,
+          vr: (Math.random() - 0.5) * 0.4,
+          w: 5 + Math.random() * 5,
+          h: 3 + Math.random() * 4,
+          c: colors[i % colors.length],
+          life: 0,
+          max: 60 + Math.random() * 40,
+        });
+      }
+      if (!running) { running = true; requestAnimationFrame(tick); }
+    }
+    return { burst };
+  })();
+
+  /* ---------- Folded sections ---------- */
+  function openSection(id, open = true) {
+    const el = document.getElementById(id);
+    const btn = document.querySelector(`[aria-controls="${id}"]`);
+    el.hidden = !open;
+    if (btn) {
+      btn.setAttribute("aria-expanded", String(open));
+      if (id === "sim") btn.textContent = open ? "Hide the simulator" : "Simulate the second half";
+    }
+  }
+  $("#sim-toggle").addEventListener("click", () => {
+    const open = $("#sim").hidden;
+    openSection("sim", open);
+    if (open) goTo("sim");
+  });
+  $("#pk-open").addEventListener("click", () => {
+    openSection("shootout");
+    $("#pk-open").closest(".extra").hidden = true;
+    goTo("shootout");
+  });
+
+  /* ---------- Scrolling to a moment ---------- */
+  function goTo(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (el.hidden) openSection(id);
+    const top = docTop(el);
+    const y = el.classList.contains("event")
+      ? top + 40 - window.innerHeight * 0.5 + 6
+      : top - 90;
+    window.scrollTo({ top: Math.max(0, y), behavior: reduce ? "auto" : "smooth" });
+  }
+
+  /* ---------- Team sheet ---------- */
+  const PLAYERS = [
+    { n: 1, name: "Excel", pos: "Goalkeeper", x: 7, y: 50, desc: "Microsoft Excel Expert certified. The last line of defence for every model I build.", go: "ev-58", cta: "See it at 58'" },
+    { n: 2, name: "SQL", pos: "Right back", x: 26, y: 84, desc: "The database under the CRM I built for Core Exteriors.", go: "ev-72", cta: "See it at 72'" },
+    { n: 4, name: "STATA", pos: "Centre back", x: 22, y: 62, desc: "Econometrics for the economics half of my degree.", go: "ev-30", cta: "See it at 30'" },
+    { n: 5, name: "VBA", pos: "Centre back", x: 22, y: 38, desc: "Macros and automation for spreadsheet models.", go: "ev-58", cta: "See it at 58'" },
+    { n: 3, name: "R", pos: "Left back", x: 26, y: 16, desc: "Statistics and regression work.", go: "ev-45", cta: "See it at halftime" },
+    { n: 6, name: "Monte Carlo", pos: "Defensive mid", x: 43, y: 50, desc: "Stochastic modelling. You can run a simulation yourself at halftime.", go: "sim", cta: "Try it at halftime" },
+    { n: 8, name: "Python", pos: "Central mid", x: 57, y: 73, desc: "The engine room. The CRM, the outreach pipeline and the arbitrage engine all run on it.", go: "ev-72", cta: "See it at 72'" },
+    { n: 10, name: "Regression", pos: "Attacking mid", x: 57, y: 27, desc: "What a midfielder is worth: my Premier League wage regression.", go: "ev-45", cta: "See it at halftime" },
+    { n: 7, name: "n8n", pos: "Right wing", x: 79, y: 84, desc: "Automates outreach and invoicing at Core Exteriors.", go: "ev-72", cta: "See it at 72'" },
+    { n: 9, name: "C", pos: "Striker", x: 85, y: 50, desc: "Built a triangular arbitrage bot in C, where speed matters.", go: "ev-45", cta: "See it at halftime" },
+    { n: 11, name: "Web", pos: "Left wing", x: 79, y: 16, desc: "Websites and performance analysis for small businesses since 2022.", go: "ev-24", cta: "See it at 24'" },
+  ];
+  (() => {
+    const field = $("#tactics");
+    const num = $("#pc-num"), pos = $("#pc-pos"), name = $("#pc-name"), desc = $("#pc-desc"), go = $("#pc-go");
+    let current = null;
+    const buttons = PLAYERS.map((p) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "player";
+      b.style.setProperty("--x", p.x + "%");
+      b.style.setProperty("--y", p.y + "%");
+      b.setAttribute("aria-pressed", "false");
+      b.setAttribute("aria-label", `${p.n}, ${p.name}, ${p.pos}`);
+      b.innerHTML = `<span class="disc cond">${p.n}</span><span class="nm">${p.name}</span>`;
+      b.addEventListener("click", () => select(p, b));
+      field.appendChild(b);
+      return b;
+    });
+    function select(p, b) {
+      buttons.forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+      num.textContent = p.n;
+      pos.textContent = p.pos;
+      name.textContent = p.name;
+      desc.textContent = p.desc;
+      go.textContent = p.cta;
+      current = p;
+    }
+    go.addEventListener("click", () => current && goTo(current.go));
+    const start = PLAYERS.findIndex((p) => p.n === 8);
+    select(PLAYERS[start], buttons[start]);
+  })();
+
+  /* ---------- Monte Carlo second half ---------- */
+  (() => {
+    const N = 10000;
+    const HT_HOME = 2, HT_AWAY = 0;
+    const a = $("#rate-a"), b = $("#rate-b");
+    const aOut = $("#rate-a-out"), bOut = $("#rate-b-out");
+    const list = $("#scores");
+    const bar = $$(".wdl-bar span");
+    function poisson(lambda) {
+      const L = Math.exp(-lambda);
+      let k = 0, p = 1;
+      do { k++; p *= Math.random(); } while (p > L);
+      return k - 1;
+    }
+    const pct = (x) => (x * 100).toFixed(1) + "%";
+    function run() {
+      const la = Number(a.value) / 2, lb = Number(b.value) / 2;
+      aOut.textContent = Number(a.value).toFixed(1);
+      bOut.textContent = Number(b.value).toFixed(1);
+      let w = 0, d = 0, l = 0;
+      const counts = new Map();
+      for (let i = 0; i < N; i++) {
+        const h = HT_HOME + poisson(la), o = HT_AWAY + poisson(lb);
+        if (h > o) w++; else if (h === o) d++; else l++;
+        const k = h + " : " + o;
+        counts.set(k, (counts.get(k) || 0) + 1);
+      }
+      $("#p-w").textContent = pct(w / N);
+      $("#p-d").textContent = pct(d / N);
+      $("#p-l").textContent = pct(l / N);
+      bar[0].style.width = (w / N) * 100 + "%";
+      bar[1].style.width = (d / N) * 100 + "%";
+      bar[2].style.width = (l / N) * 100 + "%";
+      const top = [...counts.entries()].sort((x, y) => y[1] - x[1]).slice(0, 5);
+      const max = top[0][1];
+      list.innerHTML = top.map(([k, c]) =>
+        `<li><span class="sl cond">${k}</span><span class="bar"><span style="width:${(c / max) * 100}%"></span></span><span class="pct">${pct(c / N)}</span></li>`
+      ).join("");
+    }
+    let t = null;
+    const soon = () => { clearTimeout(t); t = setTimeout(run, 90); };
+    a.addEventListener("input", soon);
+    b.addEventListener("input", soon);
+    $("#run-sim").addEventListener("click", run);
+    run();
+  })();
+
+  /* ---------- Highlight tape ---------- */
+  function embedFor(url) {
+    const yt = url.match(/(?:youtu\.be\/|[?&]v=|embed\/|shorts\/)([\w-]{11})/);
+    if (yt) return { type: "iframe", src: `https://www.youtube-nocookie.com/embed/${yt[1]}?autoplay=1&rel=0` };
+    const hudl = url.match(/hudl\.com\/(?:embed\/)?video\/(.+)$/);
+    if (hudl) return { type: "iframe", src: `https://www.hudl.com/embed/video/${hudl[1]}` };
+    if (/\.(mp4|webm|mov)(\?.*)?$/i.test(url)) return { type: "video", src: url };
+    return null;
+  }
+  const playBtn = $("#play");
+  if (playBtn) playBtn.addEventListener("click", () => {
+    const media = HIGHLIGHT_URL ? embedFor(HIGHLIGHT_URL.trim()) : null;
+    if (!media) {
+      const note = $("#note");
+      note.textContent = "The highlight tape isn't linked yet. Add a YouTube, Hudl or .mp4 link to HIGHLIGHT_URL in this page's script.";
+      note.hidden = false;
+      $("#play").classList.add("noted");
+      return;
+    }
+    let el;
+    if (media.type === "iframe") {
+      el = document.createElement("iframe");
+      el.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      el.allowFullscreen = true;
+      el.title = "Mirkomil Oblokulov soccer highlights";
+    } else {
+      el = document.createElement("video");
+      el.controls = true;
+      el.autoplay = true;
+      el.playsInline = true;
+    }
+    el.src = media.src;
+    $("#screen").replaceChildren(el);
+  });
+
+  /* ---------- Penalty shootout ---------- */
+  (() => {
+    const goal = $("#pk-goal"), zones = $("#pk-zones"), keeper = $("#keeper"), pkBall = $("#pk-ball");
+    const oddsEl = $("#pk-odds"), resultEl = $("#pk-result"), resetBtn = $("#pk-reset");
+    const kicks = $$("#pk-kicks li");
+    const NAMES = [["top left", "top middle", "top right"], ["bottom left", "bottom middle", "bottom right"]];
+    const MISS = [[0.15, 0.07, 0.15], [0.05, 0.02, 0.05]];
+    const SAVE = [[0.5, 0.75, 0.5], [0.85, 0.95, 0.85]];
+    let w, shot, xg, busy;
+
+    const pGoal = (r, c) => (1 - MISS[r][c]) * (1 - w[c] * SAVE[r][c]);
+    const pickColumn = () => {
+      const x = Math.random();
+      return x < w[0] ? 0 : x < w[0] + w[1] ? 1 : 2;
+    };
+
+    const zoneButtons = [];
+    for (let r = 0; r < 2; r++) {
+      for (let c = 0; c < 3; c++) {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.innerHTML = '<span class="zp" aria-hidden="true"></span>';
+        b.dataset.r = r;
+        b.dataset.c = c;
+        b.addEventListener("mouseenter", () => showOdds(r, c));
+        b.addEventListener("focus", () => showOdds(r, c));
+        b.addEventListener("click", () => kick(r, c));
+        zones.appendChild(b);
+        zoneButtons.push(b);
+      }
+    }
+    function setDisabled(v) { zoneButtons.forEach((b) => { b.disabled = v; }); }
+    const HINT = "The numbers are your chance of scoring from each spot.";
+    function updateOdds() {
+      zoneButtons.forEach((b) => {
+        const r = Number(b.dataset.r), c = Number(b.dataset.c);
+        const pc = Math.round(pGoal(r, c) * 100);
+        b.querySelector(".zp").textContent = pc + "%";
+        b.setAttribute("aria-label", `Shoot ${NAMES[r][c]}, ${pc}% chance of scoring`);
+      });
+    }
+    function showOdds(r, c) {
+      if (busy || shot >= 5) return;
+      oddsEl.innerHTML = `Chance of scoring ${NAMES[r][c]}: <strong>${Math.round(pGoal(r, c) * 100)}%</strong>`;
+    }
+    function reset() {
+      w = [0.45, 0.1, 0.45];
+      shot = 0;
+      xg = 0;
+      busy = false;
+      kicks.forEach((k) => { k.className = ""; k.setAttribute("aria-label", "Not taken"); });
+      resultEl.textContent = "";
+      resetBtn.hidden = true;
+      setDisabled(false);
+      updateOdds();
+      oddsEl.textContent = HINT;
+    }
+
+    function kick(r, c) {
+      if (busy || shot >= 5) return;
+      busy = true;
+      setDisabled(true);
+      const p = pGoal(r, c);
+      xg += p;
+      const kc = pickColumn();
+      const miss = Math.random() < MISS[r][c];
+      const saved = !miss && kc === c && Math.random() < SAVE[r][c];
+      const scored = !miss && !saved;
+
+      const gr = goal.getBoundingClientRect();
+      const br = pkBall.getBoundingClientRect();
+      const cw = gr.width / 3, rh = gr.height / 2;
+      let tx = gr.left + cw * (c + 0.5);
+      let ty = gr.top + rh * (r + 0.5);
+      if (miss) {
+        if (r === 0) ty = gr.top - rh * 0.7;
+        else tx += (c === 0 ? -1 : c === 2 ? 1 : (Math.random() < 0.5 ? -1 : 1)) * cw * (c === 1 ? 1.65 : 0.95);
+      }
+      const dx = tx - (br.left + br.width / 2);
+      const dy = ty - (br.top + br.height / 2);
+
+      const kRow = saved ? r : kc === c ? 1 - r : (Math.random() < 0.5 ? 0 : 1);
+      const side = kc - 1;
+      const kdx = side * cw * (kRow === 0 ? 0.62 : 0.42);
+      const kdy = side === 0 ? (kRow === 0 ? -rh * 0.42 : 0) : (kRow === 0 ? -rh * 0.3 : -rh * 0.12);
+      const krot = side * (kRow === 0 ? 50 : 66);
+
+      Sound.thump();
+      keeper.animate(
+        [{ transform: "none" }, { transform: `translate(${kdx}px, ${kdy}px) rotate(${krot}deg)` }],
+        { duration: reduce ? 1 : 420, delay: reduce ? 0 : 60, easing: "cubic-bezier(.2,.8,.3,1)", fill: "forwards" }
+      );
+      const frames = saved
+        ? [
+            { transform: "translate(0px, 0px) scale(1)" },
+            { transform: `translate(${dx}px, ${dy}px) scale(.62)`, offset: 0.55 },
+            { transform: `translate(${dx * 0.75}px, ${dy * 0.35}px) scale(.8)` },
+          ]
+        : [
+            { transform: "translate(0px, 0px) scale(1)" },
+            { transform: `translate(${dx}px, ${dy}px) scale(.58)` },
+          ];
+      pkBall.animate(frames, {
+        duration: reduce ? 1 : saved ? 820 : 520,
+        easing: "cubic-bezier(.15,.7,.3,1)",
+        fill: "forwards",
+      });
+
+      setTimeout(() => resolve(scored, saved, r, c, p, tx, ty), reduce ? 10 : 520);
+    }
+
+    function resolve(scored, saved, r, c, p, tx, ty) {
+      const li = kicks[shot];
+      li.className = scored ? "scored" : "missed";
+      li.setAttribute("aria-label", scored ? "Scored" : "Missed");
+      shot++;
+      const chance = Math.round(p * 100);
+      if (scored) {
+        resultEl.textContent = `Goal! You had a ${chance}% chance from there.`;
+        Sound.cheer();
+        Confetti.burst(tx, ty, 50);
+      } else {
+        resultEl.textContent = saved ? "Saved. He read it." : r === 0 ? "Over the bar." : "Wide of the post.";
+        Sound.groan();
+      }
+      // The keeper leans toward wherever you just shot.
+      w[c] += 0.2;
+      const s = w[0] + w[1] + w[2];
+      w = w.map((v) => v / s);
+
+      setTimeout(() => {
+        pkBall.getAnimations().forEach((a) => a.cancel());
+        keeper.getAnimations().forEach((a) => a.cancel());
+        busy = false;
+        if (shot >= 5) finish();
+        else {
+          setDisabled(false);
+          updateOdds();
+          oddsEl.textContent = HINT;
+        }
+      }, reduce ? 500 : 1300);
+    }
+
+    function finish() {
+      const goals = kicks.filter((k) => k.classList.contains("scored")).length;
+      const verdict = goals === 5 ? "Perfect. Ice in the veins." : goals >= 3 ? "Clinical." : "The Odds take this one.";
+      resultEl.textContent = `${verdict} You scored ${goals} of 5, from ${xg.toFixed(1)} expected goals.`;
+      oddsEl.textContent = "The keeper adjusted to every kick you took.";
+      setDisabled(true);
+      resetBtn.hidden = false;
+      if (goals === 5) Sound.whistle([0.25, 0.25, 0.7]);
+    }
+
+    resetBtn.addEventListener("click", reset);
+    reset();
+  })();
+
+  /* ---------- The match: ball, clock, score, timeline ---------- */
+  const pitch = $(".pitch");
+  const net = $(".net");
+  const ball = $(".ball");
+  const ballSvg = ball.querySelector("svg");
+  const bug = $(".bug");
+  const homeScore = $("#score-home");
+  const clock = $("#clock");
+  const timeline = $(".timeline");
+  const track = $(".tl-track");
+  const fill = $(".tl-fill");
+  const tip = $(".tl-tip");
+
+  const marks = $$("[data-minute]").map((el) => ({ id: el.id, m: Number(el.dataset.minute), title: el.dataset.title, kind: el.dataset.kind }));
+  marks.push({ id: "fulltime", m: 90, title: "Full time", kind: "ft" });
+  marks.forEach((mk) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "tl-mark " + mk.kind;
+    b.style.setProperty("--at", (mk.m / 90) * 100 + "%");
+    b.setAttribute("aria-label", `${mk.m} minutes: ${mk.title}`);
+    b.innerHTML = mk.kind === "goal"
+      ? '<svg aria-hidden="true"><use href="#ball"/></svg>'
+      : mk.kind === "tape"
+        ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="currentColor"/></svg>'
+        : '<span class="dot"></span>';
+    const show = () => {
+      tip.textContent = `${mk.m}' ${mk.title}`;
+      tip.classList.add("show");
+      const tr = timeline.getBoundingClientRect();
+      const r = b.getBoundingClientRect();
+      const half = tip.offsetWidth / 2;
+      const x = Math.min(tr.width - half, Math.max(half, r.left + r.width / 2 - tr.left));
+      tip.style.left = x + "px";
+    };
+    const hide = () => tip.classList.remove("show");
+    b.addEventListener("mouseenter", show);
+    b.addEventListener("focus", show);
+    b.addEventListener("mouseleave", hide);
+    b.addEventListener("blur", hide);
+    b.addEventListener("click", () => goTo(mk.id));
+    track.appendChild(b);
+    mk.btn = b;
+  });
+
+  let anchors = [], wides = [], goals = [], halftime = [0, 0];
+  let pitchTop = 0, pitchLeft = 0, pitchW = 0, netBottom = 0, mobile = false;
+  let x = null, score = 0, flashTimer = null, lastClock = "", phase = "pre";
+
+  function measure() {
+    mobile = window.innerWidth <= 760;
+    const r = pitch.getBoundingClientRect();
+    pitchTop = r.top + window.scrollY;
+    pitchLeft = r.left;
+    pitchW = r.width;
+
+    anchors = [{ y: pitchTop + 60, x: 0.5, m: 0 }];
+    $$("[data-minute]").forEach((el) => {
+      const side = el.dataset.side;
+      anchors.push({
+        y: docTop(el) + 40,
+        x: el.classList.contains("has-photo")
+          ? (side === "left" ? 0.58 : 0.42)
+          : side === "left" ? 0.74 : side === "right" ? 0.26 : 0.5,
+        m: Number(el.dataset.minute),
+      });
+    });
+    const netTop = docTop(net);
+    netBottom = netTop + net.offsetHeight;
+    anchors.push({ y: netTop + net.offsetHeight / 2, x: 0.5, m: 90 });
+
+    wides = $$(".wide").map((el) => {
+      const t = docTop(el);
+      return [t - 50, t + el.offsetHeight + 50];
+    });
+    goals = $$("[data-goal]").map((el) => docTop(el) + 40);
+    const board = $(".board");
+    const bt = docTop(board);
+    halftime = [bt, bt + board.offsetHeight];
+  }
+
+  function flash() {
+    if (!reduce) {
+      bug.classList.remove("goal");
+      void bug.offsetWidth;
+      bug.classList.add("goal");
+      clearTimeout(flashTimer);
+      flashTimer = setTimeout(() => bug.classList.remove("goal"), 1700);
+      const visible = !ball.classList.contains("hide");
+      Confetti.burst(visible ? x : 120, visible ? window.innerHeight / 2 : 40);
+    }
+    Sound.cheer();
+  }
+
+  function frame() {
+    const by = window.scrollY + window.innerHeight * 0.5;
+
+    let i = 0;
+    while (i < anchors.length - 1 && anchors[i + 1].y < by) i++;
+    const a = anchors[i];
+    const b = anchors[Math.min(i + 1, anchors.length - 1)];
+    let t = b.y === a.y ? 0 : (by - a.y) / (b.y - a.y);
+    t = Math.min(1, Math.max(0, t));
+    const s = t * t * (3 - 2 * t);
+
+    const tx = mobile ? pitchLeft + 30 : pitchLeft + pitchW * (a.x + (b.x - a.x) * s);
+    x = x === null || reduce ? tx : x + (tx - x) * 0.14;
+    ball.style.transform = `translate3d(${x.toFixed(1)}px, 0, 0)`;
+    if (!reduce) ballSvg.style.transform = `rotate(${(window.scrollY * 0.6) % 360}deg)`;
+
+    const hidden = by < pitchTop + 30 || by > netBottom + 10 || wides.some(([s0, e0]) => by > s0 && by < e0);
+    ball.classList.toggle("hide", hidden);
+
+    const minute = by < anchors[0].y ? 0 : a.m + (b.m - a.m) * t;
+    let label, nextPhase;
+    if (by > netBottom + 20) { label = "FT"; nextPhase = "ft"; }
+    else if (by < anchors[0].y) { label = "0'"; nextPhase = "pre"; }
+    else if (by > halftime[0] && by < halftime[1]) { label = "HT"; nextPhase = "ht"; }
+    else { label = Math.floor(minute) + "'"; nextPhase = minute < 45 ? "first" : "second"; }
+    if (label !== lastClock) { clock.textContent = label; lastClock = label; }
+
+    if (nextPhase !== phase) {
+      if (phase === "pre" && nextPhase === "first") Sound.whistle([0.45]);
+      if (nextPhase === "ht" && phase === "first") Sound.whistle([0.3, 0.3]);
+      if (nextPhase === "ft" && phase === "second") Sound.whistle([0.3, 0.3, 0.8]);
+      phase = nextPhase;
+    }
+
+    const sc = goals.filter((g) => g <= by).length;
+    if (sc !== score) {
+      if (sc > score) flash();
+      score = sc;
+      homeScore.textContent = sc;
+    }
+
+    const shown = by > pitchTop - 40 && by < netBottom + 20;
+    timeline.classList.toggle("off", !shown);
+    fill.style.width = Math.min(100, (minute / 90) * 100) + "%";
+    marks.forEach((mk) => mk.btn.classList.toggle("passed", label === "FT" || minute >= mk.m - 0.5));
+
+    requestAnimationFrame(frame);
+  }
+
+  measure();
+  window.addEventListener("resize", measure);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+  new ResizeObserver(measure).observe(document.body);
+  requestAnimationFrame(frame);
+})();
+</script>
 </body>
-
 </html>
