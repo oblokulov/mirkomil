@@ -345,6 +345,27 @@
     line-height: 0.86;
   }
   .section-sub { margin: 0 0 30px; max-width: 34em; font-size: 19px; color: var(--chalk-soft); }
+  .xi-toggle {
+    display: inline-flex;
+    gap: 4px;
+    margin: 0 0 18px;
+    padding: 4px;
+    background: var(--ink);
+    border-radius: 999px;
+  }
+  .xi-toggle button {
+    padding: 10px 18px 9px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--chalk);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .xi-toggle button:hover { background: rgba(243, 245, 238, 0.1); }
+  .xi-toggle button[aria-pressed="true"] { background: var(--led); color: var(--ink); }
   .lineup-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
@@ -956,7 +977,8 @@
 <section class="lineup" id="lineup" aria-labelledby="lineup-title">
   <div class="lineup-inner">
     <h2 class="section-title cond" id="lineup-title">Team sheet</h2>
-    <p class="section-sub">My starting XI is my toolkit. Pick a player to see where they've played.</p>
+    <p class="section-sub">Two lineups: the tools I use and the way I play. Pick a player to see where they've played.</p>
+    <div class="xi-toggle" role="group" aria-label="Choose a lineup"><button type="button" data-xi="toolkit" aria-pressed="true">Toolkit</button><button type="button" data-xi="character" aria-pressed="false">Character</button></div>
     <div class="lineup-grid">
       <div class="tactics" id="tactics" role="group" aria-label="Starting XI">
         <svg class="lines lines-h" viewBox="0 0 160 100" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke="rgba(243,245,238,0.5)" stroke-width="2" vector-effect="non-scaling-stroke">
@@ -1378,36 +1400,46 @@
   }
 
   /* ---------- Team sheet ---------- */
-  const PLAYERS = [
-    { n: 1, name: "Excel", pos: "Goalkeeper", x: 7, y: 50, desc: "The last line of defence for every model I build.", go: "ev-58", cta: "See it at 58'" },
-    { n: 2, name: "SQL", pos: "Right back", x: 26, y: 84, desc: "The database under the CRM I built for Core Exteriors.", go: "ev-72", cta: "See it at 72'" },
-    { n: 4, name: "STATA", pos: "Centre back", x: 22, y: 62, desc: "Econometrics for the economics half of my degree.", go: "ev-30", cta: "See it at 31'" },
-    { n: 5, name: "Sales", pos: "Centre back", x: 22, y: 38, desc: "Winning the work: sponsorship deals at United F.C., and the quotes, bids and outreach that bring in clients at Core Exteriors.", go: "ev-58", cta: "See it at 58'" },
-    { n: 3, name: "R", pos: "Left back", x: 26, y: 16, desc: "Statistics and regression work.", go: "ev-45", cta: "See it at halftime" },
-    { n: 6, name: "Monte Carlo", pos: "Defensive mid", x: 43, y: 50, desc: "Stochastic modelling. You can run a simulation yourself at halftime.", go: "sim", cta: "Try it at halftime" },
-    { n: 8, name: "Python", pos: "Central mid", x: 57, y: 73, desc: "The engine room. The CRM, the outreach pipeline and the arbitrage engine all run on it.", go: "ev-72", cta: "See it at 72'" },
-    { n: 10, name: "Regression", pos: "Attacking mid", x: 57, y: 27, desc: "What a midfielder is worth: my Premier League wage regression.", go: "ev-45", cta: "See it at halftime" },
-    { n: 7, name: "n8n", pos: "Right wing", x: 79, y: 84, desc: "Automates outreach and invoicing at Core Exteriors.", go: "ev-72", cta: "See it at 72'" },
-    { n: 9, name: "C", pos: "Striker", x: 85, y: 50, desc: "Built a triangular arbitrage bot in C, where speed matters.", go: "ev-45", cta: "See it at halftime" },
-    { n: 11, name: "Web", pos: "Left wing", x: 79, y: 16, desc: "Websites and performance analysis for small businesses since 2022.", go: "ev-24", cta: "See it at 26'" },
-  ];
+  const LINEUPS = {
+    toolkit: {
+      start: 8,
+      players: [
+      { n: 1, name: "Excel", pos: "Goalkeeper", x: 7, y: 50, desc: "The last line of defence for every model I build.", go: "ev-58", cta: "See it at 58'" },
+      { n: 2, name: "SQL", pos: "Right back", x: 26, y: 84, desc: "The database under the CRM I built for Core Exteriors.", go: "ev-72", cta: "See it at 72'" },
+      { n: 4, name: "STATA", pos: "Centre back", x: 22, y: 62, desc: "Econometrics for the economics half of my degree.", go: "ev-30", cta: "See it at 31'" },
+      { n: 5, name: "Sales", pos: "Centre back", x: 22, y: 38, desc: "Winning the work: sponsorship deals at United F.C., and the quotes, bids and outreach that bring in clients at Core Exteriors.", go: "ev-58", cta: "See it at 58'" },
+      { n: 3, name: "R", pos: "Left back", x: 26, y: 16, desc: "Statistics and regression work.", go: "ev-45", cta: "See it at halftime" },
+      { n: 6, name: "Monte Carlo", pos: "Defensive mid", x: 43, y: 50, desc: "Stochastic modelling. You can run a simulation yourself at halftime.", go: "sim", cta: "Try it at halftime" },
+      { n: 8, name: "Python", pos: "Central mid", x: 57, y: 73, desc: "The engine room. The CRM, the outreach pipeline and the arbitrage engine all run on it.", go: "ev-72", cta: "See it at 72'" },
+      { n: 10, name: "Regression", pos: "Attacking mid", x: 57, y: 27, desc: "What a midfielder is worth: my Premier League wage regression.", go: "ev-45", cta: "See it at halftime" },
+      { n: 7, name: "n8n", pos: "Right wing", x: 79, y: 84, desc: "Automates outreach and invoicing at Core Exteriors.", go: "ev-72", cta: "See it at 72'" },
+      { n: 9, name: "C", pos: "Striker", x: 85, y: 50, desc: "Built a triangular arbitrage bot in C, where speed matters.", go: "ev-45", cta: "See it at halftime" },
+      { n: 11, name: "Web", pos: "Left wing", x: 79, y: 16, desc: "Websites and performance analysis for small businesses since 2022.", go: "ev-24", cta: "See it at 26'" },
+      ],
+    },
+    character: {
+      start: 9,
+      players: [
+        { n: 1, name: "Composed", pos: "Goalkeeper", x: 7, y: 50, desc: "The keeper has to stay calm when everyone else can't. Captaining a team through an OFSAA run taught me how.", go: "ev-13", cta: "See it at 11'" },
+        { n: 2, name: "Accountable", pos: "Right back", x: 26, y: 84, desc: "As COO, the invoices, the payments and the books stop with me.", go: "ev-58", cta: "See it at 58'" },
+        { n: 4, name: "Disciplined", pos: "Centre back", x: 22, y: 62, desc: "Varsity training, a double major and a company, all in the same week.", go: "ev-30", cta: "See it at 31'" },
+        { n: 5, name: "Team player", pos: "Centre back", x: 22, y: 38, desc: "From the UFA dressing room to a 20+ person team at Core Exteriors, the result is always shared.", go: "ev-72", cta: "See it at 72'" },
+        { n: 3, name: "Adaptable", pos: "Left back", x: 26, y: 16, desc: "Born in Samarkand, moved to Toronto in 2016, now in London, Ontario. New places don't slow me down.", go: "ev-7", cta: "See it at 6'" },
+        { n: 6, name: "Curious", pos: "Defensive mid", x: 43, y: 50, desc: "I took a game I love and asked what the numbers say about it.", go: "ev-45", cta: "See it at halftime" },
+        { n: 8, name: "Connector", pos: "Central mid", x: 57, y: 73, desc: "Closed sponsorships at United F.C. and lead outreach for a club of 200+ members.", go: "ev-41", cta: "See it at 40'" },
+        { n: 10, name: "Mentor", pos: "Attacking mid", x: 57, y: 27, desc: "Helped 100+ incoming students settle in through the King's KAMP program.", go: "ev-84", cta: "See it at 84'" },
+        { n: 7, name: "Entrepreneurial", pos: "Right wing", x: 79, y: 84, desc: "Co-founded Core Exteriors in 2022 and grew it to over $70K in revenue in 2026.", go: "ev-58", cta: "See it at 58'" },
+        { n: 9, name: "Determined", pos: "Striker", x: 85, y: 50, desc: "A new city in 2016, Senior Male Athlete of the Year by 2023. I keep going until it's done.", go: "ev-20", cta: "See it at 16'" },
+        { n: 11, name: "Leader", pos: "Left wing", x: 79, y: 16, desc: "Captain at Ursula Franklin Academy, now VP Outreach for the Turkic Cultural Club at Western.", go: "ev-13", cta: "See it at 11'" },
+      ],
+    },
+  };
   (() => {
     const field = $("#tactics");
     const num = $("#pc-num"), pos = $("#pc-pos"), name = $("#pc-name"), desc = $("#pc-desc"), go = $("#pc-go");
+    const toggles = $$(".xi-toggle button");
     let current = null;
-    const buttons = PLAYERS.map((p) => {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.className = "player";
-      b.style.setProperty("--x", p.x + "%");
-      b.style.setProperty("--y", p.y + "%");
-      b.setAttribute("aria-pressed", "false");
-      b.setAttribute("aria-label", `${p.n}, ${p.name}, ${p.pos}`);
-      b.innerHTML = `<span class="disc cond">${p.n}</span><span class="nm">${p.name}</span>`;
-      b.addEventListener("click", () => select(p, b));
-      field.appendChild(b);
-      return b;
-    });
+    let buttons = [];
     function select(p, b) {
       buttons.forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
       num.textContent = p.n;
@@ -1417,9 +1449,30 @@
       go.textContent = p.cta;
       current = p;
     }
+    function show(key) {
+      const lineup = LINEUPS[key];
+      buttons.forEach((b) => b.remove());
+      buttons = lineup.players.map((p) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "player";
+        b.style.setProperty("--x", p.x + "%");
+        b.style.setProperty("--y", p.y + "%");
+        b.setAttribute("aria-pressed", "false");
+        b.setAttribute("aria-label", `${p.n}, ${p.name}, ${p.pos}`);
+        b.innerHTML = `<span class="disc cond">${p.n}</span><span class="nm">${p.name}</span>`;
+        b.addEventListener("click", () => select(p, b));
+        field.appendChild(b);
+        return b;
+      });
+      field.setAttribute("aria-label", key === "toolkit" ? "Starting XI: toolkit" : "Starting XI: character");
+      toggles.forEach((t) => t.setAttribute("aria-pressed", String(t.dataset.xi === key)));
+      const i = lineup.players.findIndex((p) => p.n === lineup.start);
+      select(lineup.players[i], buttons[i]);
+    }
+    toggles.forEach((t) => t.addEventListener("click", () => show(t.dataset.xi)));
     go.addEventListener("click", () => current && goTo(current.go));
-    const start = PLAYERS.findIndex((p) => p.n === 8);
-    select(PLAYERS[start], buttons[start]);
+    show("toolkit");
   })();
 
   /* ---------- Monte Carlo second half ---------- */
