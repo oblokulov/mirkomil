@@ -27,7 +27,7 @@
   "@type": "Person",
   "name": "Mirkomil Oblokulov",
   "url": "https://www.mirkomiloblokulov.com/",
-  "image": "https://www.mirkomiloblokulov.com/asset/img/headshot-2025.jpg",
+  "image": "https://www.mirkomiloblokulov.com/asset/img/headshot-web.jpg",
   "jobTitle": "COO, Core Exteriors",
   "description": "Actuarial Science and Economics student at Western University, varsity soccer player and COO of Core Exteriors.",
   "affiliation": { "@type": "CollegeOrUniversity", "name": "Western University" },
@@ -286,11 +286,30 @@
       radial-gradient(ellipse 60% 55% at 92% -12%, rgba(255, 255, 236, 0.16), transparent 70%),
       var(--stands);
   }
-  .hero-inner { width: 100%; max-width: 1120px; margin: 0 auto; min-width: 0; }
+  .hero-inner {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
+    column-gap: 56px;
+    align-items: end;
+  }
+  .hero-text { min-width: 0; }
+  .portrait {
+    margin: 0 0 6px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 3px solid var(--chalk);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+    rotate: 1.5deg;
+  }
+  .portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; }
   .hero h1 {
     margin: 0 0 28px;
     font-weight: 900;
-    font-size: clamp(76px, 15vw, 220px);
+    font-size: clamp(76px, 12vw, 180px);
     line-height: 0.84;
     letter-spacing: -0.01em;
     overflow-wrap: break-word;
@@ -808,6 +827,9 @@
   footer { padding: 40px 24px 100px; text-align: center; font-size: 15px; color: var(--chalk-dim); }
 
   @media (max-width: 860px) {
+    .hero-inner { grid-template-columns: minmax(0, 1fr); }
+    .portrait { order: -1; width: 150px; margin: 0 0 26px; border-radius: 50%; rotate: 0deg; }
+    .portrait img { aspect-ratio: 1; object-position: 50% 25%; }
     .lineup-grid { grid-template-columns: 1fr; }
     .sim-controls { grid-template-columns: 1fr; }
     .sim-controls .btn { justify-self: start; }
@@ -829,7 +851,8 @@
     .tl-mark svg { width: 14px; height: 14px; }
     .tl-mark .dot { width: 8px; height: 8px; }
     .tl-mark.ht .dot { height: 16px; width: 4px; }
-    .hero { padding: 90px 20px 56px; }
+    .hero { padding: 76px 20px 56px; }
+    .portrait { width: 120px; margin-bottom: 20px; }
     .lineup { padding: 4vh 16px 12vh; }
     .tactics { aspect-ratio: 10 / 15; background: repeating-linear-gradient(180deg, var(--pitch-a) 0 10%, var(--pitch-b) 10% 20%); }
     .tactics .lines-h { display: none; }
@@ -919,11 +942,14 @@
 
 <header class="hero">
   <div class="hero-inner">
+    <div class="hero-text">
     <h1 class="cond">Mirkomil<br>Oblokulov</h1>
     <p class="lede">Born in Samarkand, now at Western for Actuarial Science and Economics, playing varsity soccer and running operations at a company I helped build. Here's my story so far, played out as a match.</p>
     <p class="fixture">Today's fixture: <strong>Oblokulov vs The Odds</strong></p>
     <a class="cue cond" href="#lineup"><svg aria-hidden="true"><use href="#ball"/></svg>See the team sheet</a>
     <p class="skip">In a hurry? <a href="#fulltime">Skip to full time</a></p>
+    </div>
+    <figure class="portrait"><img src="asset/img/headshot-web.jpg" width="898" height="900" alt="Professional headshot of Mirkomil Oblokulov in a suit and tie"></figure>
   </div>
 </header>
 
