@@ -825,6 +825,10 @@
     .sound { width: 34px; height: 33px; padding: 0; }
     .timeline { bottom: 10px; height: 44px; padding: 0 18px; }
     .tl-track { top: 20px; }
+    .tl-mark { width: 16px; height: 16px; }
+    .tl-mark svg { width: 14px; height: 14px; }
+    .tl-mark .dot { width: 8px; height: 8px; }
+    .tl-mark.ht .dot { height: 16px; width: 4px; }
     .hero { padding: 90px 20px 56px; }
     .lineup { padding: 4vh 16px 12vh; }
     .tactics { aspect-ratio: 10 / 15; background: repeating-linear-gradient(180deg, var(--pitch-a) 0 10%, var(--pitch-b) 10% 20%); }
@@ -976,9 +980,9 @@
     <figure class="photo portrait"><img src="asset/img/story/samarkand.jpg" width="825" height="1100" loading="lazy" alt="Mirkomil at night in front of the lit-up madrasahs of Registan Square in Samarkand"><figcaption>Registan, Samarkand</figcaption></figure>
   </article>
 
-  <article class="event right has-photo" id="ev-7" data-minute="7" data-side="right" data-kind="transfer" data-title="Transfer to Toronto">
+  <article class="event right has-photo" id="ev-7" data-minute="6" data-side="right" data-kind="transfer" data-title="Transfer to Toronto">
     <div class="ev-text">
-      <div class="ev-head"><span class="min cond">7'</span><span class="chip"><svg aria-hidden="true"><use href="#transfer"/></svg>Transfer</span></div>
+      <div class="ev-head"><span class="min cond">6'</span><span class="chip"><svg aria-hidden="true"><use href="#transfer"/></svg>Transfer</span></div>
       <h3 class="cond">Transfer to Toronto</h3>
       <p>In 2016 I moved to Toronto. Every career has one big transfer, and this was mine.</p>
       <p class="when">Toronto, 2016</p>
@@ -986,9 +990,9 @@
     <figure class="photo portrait"><img src="asset/img/story/toronto.jpg" width="825" height="1100" loading="lazy" alt="Mirkomil at night below the CN Tower in Toronto"><figcaption>Toronto</figcaption></figure>
   </article>
 
-  <article class="event left has-photo" id="ev-13" data-minute="13" data-side="left" data-kind="captain" data-title="The armband">
+  <article class="event left has-photo" id="ev-13" data-minute="11" data-side="left" data-kind="captain" data-title="The armband">
     <div class="ev-text">
-      <div class="ev-head"><span class="min cond">13'</span><span class="chip"><svg aria-hidden="true"><use href="#armband"/></svg>Captain</span></div>
+      <div class="ev-head"><span class="min cond">11'</span><span class="chip"><svg aria-hidden="true"><use href="#armband"/></svg>Captain</span></div>
       <h3 class="cond">The armband</h3>
       <p>At Ursula Franklin Academy, I captained the soccer team and led us to the OFSAA Championship. That's where I learned to keep a group organized under pressure.</p>
       <p class="when">Ursula Franklin Academy, Toronto</p>
@@ -996,9 +1000,9 @@
     <figure class="photo landscape"><img src="asset/img/story/ofsaa.jpg" width="875" height="700" loading="lazy" alt="The Ursula Franklin Academy soccer team posing behind an OFSAA banner"><figcaption>UFA at OFSAA</figcaption></figure>
   </article>
 
-  <article class="event right has-photo" id="ev-20" data-minute="20" data-side="right" data-kind="goal" data-title="Athlete of the Year" data-goal>
+  <article class="event right has-photo" id="ev-20" data-minute="16" data-side="right" data-kind="goal" data-title="Athlete of the Year" data-goal>
     <div class="ev-text">
-      <div class="ev-head"><span class="min cond">20'</span><span class="chip goal"><svg aria-hidden="true"><use href="#ball"/></svg>Goal, 1 : 0</span></div>
+      <div class="ev-head"><span class="min cond">16'</span><span class="chip goal"><svg aria-hidden="true"><use href="#ball"/></svg>Goal, 1 : 0</span></div>
       <h3 class="cond">Athlete of the Year</h3>
       <p>Named Ursula Franklin Academy's Senior Male Athlete of the Year for 2022/23. First goal on the board.</p>
       <p class="when">Ursula Franklin Academy, 2022/23</p>
@@ -1006,23 +1010,9 @@
     <figure class="photo landscape"><img src="asset/img/story/athlete-of-the-year.jpg" width="1100" height="731" loading="lazy" alt="Mirkomil receiving the UFA Senior Male Athlete of the Year award"><figcaption>Senior Male Athlete of the Year</figcaption></figure>
   </article>
 
-  <article class="event left" id="ev-24" data-minute="24" data-side="left" data-kind="touch" data-title="First clients">
-    <div class="ev-head"><span class="min cond">24'</span><span class="chip">First touch</span></div>
-    <h3 class="cond">First clients</h3>
-    <p>I started building websites and running performance analysis for small businesses, some local and some overseas. My first taste of getting paid to solve a problem.</p>
-    <p class="when">Freelance, since March 2022</p>
-  </article>
-
-  <article class="event right" id="ev-30" data-minute="30" data-side="right" data-kind="goal" data-title="Two majors, one varsity kit" data-goal>
-    <div class="ev-head"><span class="min cond">30'</span><span class="chip goal"><svg aria-hidden="true"><use href="#ball"/></svg>Goal, 2 : 0</span></div>
-    <h3 class="cond">Two majors, one varsity kit</h3>
-    <p>Got into Western for a double major in Actuarial Science and Economics, and made the Western Men's Soccer team. Risk models in the lecture hall, real pressure on the pitch.</p>
-    <p class="when">Western University</p>
-  </article>
-
-  <section class="replay wide" id="ev-36" data-minute="36" data-side="center" data-kind="tape" data-title="The tape" aria-labelledby="tape-title">
-    <div class="ev-head"><span class="min cond">36'</span><h3 class="cond" id="tape-title">The tape</h3></div>
-    <p class="sub">Highlights from my time on the pitch.</p>
+  <section class="replay wide" id="ev-22" data-minute="21" data-side="center" data-kind="tape" data-title="The tape" aria-labelledby="tape-title">
+    <div class="ev-head"><span class="min cond">21'</span><h3 class="cond" id="tape-title">The tape</h3></div>
+    <p class="sub">Highlights from my 2022 season.</p>
     <div class="screen" id="screen">
       <button class="play" type="button" id="play">
         <span class="disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z" fill="currentColor"/></svg></span>
@@ -1032,8 +1022,22 @@
     </div>
   </section>
 
-  <article class="event left" id="ev-41" data-minute="41" data-side="left" data-kind="assist" data-title="Setting up a club">
-    <div class="ev-head"><span class="min cond">41'</span><span class="chip">Assist</span></div>
+  <article class="event left" id="ev-24" data-minute="26" data-side="left" data-kind="touch" data-title="First clients">
+    <div class="ev-head"><span class="min cond">26'</span><span class="chip">First touch</span></div>
+    <h3 class="cond">First clients</h3>
+    <p>I started building websites and running performance analysis for small businesses, some local and some overseas. My first taste of getting paid to solve a problem.</p>
+    <p class="when">Freelance, since March 2022</p>
+  </article>
+
+  <article class="event right" id="ev-30" data-minute="31" data-side="right" data-kind="goal" data-title="Two majors, one varsity kit" data-goal>
+    <div class="ev-head"><span class="min cond">31'</span><span class="chip goal"><svg aria-hidden="true"><use href="#ball"/></svg>Goal, 2 : 0</span></div>
+    <h3 class="cond">Two majors, one varsity kit</h3>
+    <p>Got into Western for a double major in Actuarial Science and Economics, and made the Western Men's Soccer team. Risk models in the lecture hall, real pressure on the pitch.</p>
+    <p class="when">Western University, Class of 2028</p>
+  </article>
+
+  <article class="event left" id="ev-41" data-minute="40" data-side="left" data-kind="assist" data-title="Setting up a club">
+    <div class="ev-head"><span class="min cond">40'</span><span class="chip">Assist</span></div>
     <h3 class="cond">Setting up a club</h3>
     <p>Marketing and consulting intern at United F.C. in Toronto. I worked on sponsorships, benchmarked vendors, and ran campaigns that pushed engagement past 10,000 views.</p>
     <p class="when">United F.C., February to August 2024</p>
@@ -1079,8 +1083,8 @@
   <article class="event right" id="ev-58" data-minute="58" data-side="right" data-kind="goal" data-title="Starting a company" data-goal>
     <div class="ev-head"><span class="min cond">58'</span><span class="chip goal"><svg aria-hidden="true"><use href="#ball"/></svg>Goal, 3 : 0</span></div>
     <h3 class="cond">Starting a company</h3>
-    <p>Launched Core Exteriors, a commercial exterior maintenance company serving Southern Ontario, and took on the COO role: pricing, cost models, invoicing and the books.</p>
-    <p class="when">London, Ontario</p>
+    <p>Co-founded Core Exteriors in 2022, a commercial exterior maintenance company serving Southern Ontario, and took on the COO role: pricing, cost models, invoicing and the books.</p>
+    <p class="when">London, Ontario, since 2022</p>
   </article>
 
   <article class="event left" id="ev-72" data-minute="72" data-side="left" data-kind="goal" data-title="Building the machine" data-goal>
@@ -1141,10 +1145,10 @@
 <script>
 (() => {
   // Paste your highlight tape link here: a YouTube link, a Hudl video link, or a path to an .mp4 file.
-  const HIGHLIGHT_URL = "";
+  const HIGHLIGHT_URL = "https://youtu.be/WtmB-L66V54";
   // Until a link is added, the tape moment stays off the page.
   if (!HIGHLIGHT_URL.trim()) {
-    const tape = document.getElementById("ev-36");
+    const tape = document.getElementById("ev-22");
     if (tape) tape.remove();
   }
 
@@ -1351,7 +1355,7 @@
   const PLAYERS = [
     { n: 1, name: "Excel", pos: "Goalkeeper", x: 7, y: 50, desc: "Microsoft Excel Expert certified. The last line of defence for every model I build.", go: "ev-58", cta: "See it at 58'" },
     { n: 2, name: "SQL", pos: "Right back", x: 26, y: 84, desc: "The database under the CRM I built for Core Exteriors.", go: "ev-72", cta: "See it at 72'" },
-    { n: 4, name: "STATA", pos: "Centre back", x: 22, y: 62, desc: "Econometrics for the economics half of my degree.", go: "ev-30", cta: "See it at 30'" },
+    { n: 4, name: "STATA", pos: "Centre back", x: 22, y: 62, desc: "Econometrics for the economics half of my degree.", go: "ev-30", cta: "See it at 31'" },
     { n: 5, name: "VBA", pos: "Centre back", x: 22, y: 38, desc: "Macros and automation for spreadsheet models.", go: "ev-58", cta: "See it at 58'" },
     { n: 3, name: "R", pos: "Left back", x: 26, y: 16, desc: "Statistics and regression work.", go: "ev-45", cta: "See it at halftime" },
     { n: 6, name: "Monte Carlo", pos: "Defensive mid", x: 43, y: 50, desc: "Stochastic modelling. You can run a simulation yourself at halftime.", go: "sim", cta: "Try it at halftime" },
@@ -1359,7 +1363,7 @@
     { n: 10, name: "Regression", pos: "Attacking mid", x: 57, y: 27, desc: "What a midfielder is worth: my Premier League wage regression.", go: "ev-45", cta: "See it at halftime" },
     { n: 7, name: "n8n", pos: "Right wing", x: 79, y: 84, desc: "Automates outreach and invoicing at Core Exteriors.", go: "ev-72", cta: "See it at 72'" },
     { n: 9, name: "C", pos: "Striker", x: 85, y: 50, desc: "Built a triangular arbitrage bot in C, where speed matters.", go: "ev-45", cta: "See it at halftime" },
-    { n: 11, name: "Web", pos: "Left wing", x: 79, y: 16, desc: "Websites and performance analysis for small businesses since 2022.", go: "ev-24", cta: "See it at 24'" },
+    { n: 11, name: "Web", pos: "Left wing", x: 79, y: 16, desc: "Websites and performance analysis for small businesses since 2022.", go: "ev-24", cta: "See it at 26'" },
   ];
   (() => {
     const field = $("#tactics");
